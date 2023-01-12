@@ -24,7 +24,7 @@ const Astronaut = ({color}) =>{
 
 const Spaceship = ({color}) =>{
   return(
-    <svg width="65%" height="65%" viewBox="0 0 1024 1024" className="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg width="60%" height="60%" viewBox="0 0 1024 1024" className="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg">
       <path d="M866.05824 411.0336c-2.60608-193.36192-160.0768-349.33248-354.06336-349.33248-193.98144 0-351.45216 155.97056-354.05824 349.33248h708.1216z" fill="#00DFD5" />
       <path d="M876.12416 420.97152H147.86048l0.13824-10.07616C150.67648 212.86912 313.96352 51.7632 512 51.7632s361.32352 161.10592 363.99616 359.13216l0.128 10.07616zM168.15616 401.09568h687.67744C848.03072 218.5216 695.85408 71.63904 512 71.63904S175.96928 218.5216 168.15616 401.09568z" fill="#6C0000" />
       <path d="M157.81376 409.216h708.36736v58.22464H157.81376z" fill="#FFBD00" />
@@ -45,9 +45,10 @@ const Spaceship = ({color}) =>{
 
 function App() {
 
-  const [styles, setStyles] = useState({});
-  const [text, setText] = useState("");
   const [counter, setCounter] = useState(1);
+  const [text, setText] = useState("");
+  const [styles, setStyles] = useState({});
+  const level = levels['levels'][`level-${counter}`];
 
   const camelCase = str => str.replace(/-(.)/g, (_,p) => p.toUpperCase())
   const css2obj = (strings, ...vals) => {
@@ -60,64 +61,48 @@ function App() {
   const handleSetText = (e) =>{
     setText(e.target.value)
   }
-  // console.log(Object.keys(levels['levels']['level-1'].answer))
+ 
   useEffect(() =>{
     const reactInlineCSS = css2obj`${text}`;
     setStyles(reactInlineCSS)
-    // console.log(reactInlineCSS)
+  
   },[text])
   
   const handleCheckStyles = () =>{
-    const answer = levels['levels'][`level-${counter}`].answer;
 
-    if(_.isEqual(styles, answer)){
+    if(_.isEqual(styles, level.answer)){
       console.log("Правильно")
       setCounter(prevCounter => prevCounter + 1)
     }
     else{
       console.log("Ты параша")
     }
-   
-    // if(JSON.stringify(styles) === JSON.stringify(answer)){
-    //   console.log("Правильно")
-    //   setCounter(prevCounter => prevCounter + 1)
-    // }
-    // else{
-    //   console.log("Ты параша")
-    // }
-
-    // console.log(levels['levels']['level-1'].answer['justifyContent'].includes('center'))
-    // Object.keys(answer).map(style => { 
-    //   if(Object.keys(styles).includes(style)){
-    //     console.log("Правильно")
-    //     setCounter(prevCounter => prevCounter + 1)
-    //   }
-    //   else{
-    //     console.log("Ты параша")
-    //   }
-    // })
+  
     setStyles({})
     setText("")
   
   }
+ 
   return (
     <div className="App">
         <Container>
            <Row>
               <Col xs={12} lg={6}>
-                 <div className='input-wrapper'>
-                    <textarea 
-                      name="text" 
-                      id="text"
-                      value = {text}
-                      onChange={handleSetText}
-                    />
-                    <button onClick={handleCheckStyles}>Check</button>
-                 </div>
+                
+                <div className='input-wrapper'>
+                  <p>current level: {counter}</p>
+                  <textarea 
+                    name="text" 
+                    id="text"
+                    value = {text}
+                    onChange={handleSetText}
+                  />
+                  <button onClick={handleCheckStyles}>Check</button>
+                </div>
               </Col>
               <Col xs={12} lg={6}>
                 <div className='board'>
-                  <div className='pond' style={styles}>
+                  <div className='pond' style={_.isEmpty(styles)? level.base :styles}>
                     {levels['levels'][`level-${counter}`].colors.map((color, index)=>
                      <div className='block' key={index}> 
                         <Astronaut color={color}/>
@@ -125,8 +110,8 @@ function App() {
                     )} 
                   </div>
                   <div className='background' 
-                       style={levels['levels'][`level-${counter}`].answer}>
-                    {levels['levels'][`level-${counter}`].colors.map((color, index)=>
+                       style={level.answer}>
+                    {level.colors.map((color, index)=>
                       <div className='block' key={index}> 
                         <Spaceship color={color}/>
                       </div>
