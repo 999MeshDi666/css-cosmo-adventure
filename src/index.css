@@ -50,8 +50,17 @@ code {
   height: 100%;
   padding: 1em;
 }
-.astronaut{
+/* .astronaut{
   background-color: #8fa5c3;
+} */
+#astronaut0 {
+  order: 1;
+}
+#astronaut1 {
+  order: 1;
+}
+#astronaut2 {
+  order: 2;
 }
 .block{
   position: relative;

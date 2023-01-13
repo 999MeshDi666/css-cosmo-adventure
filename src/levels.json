@@ -1,6 +1,7 @@
 {
     "levels":{
         "level-1":{
+            "parentStyles": true,
             "colors": ["#f0e8f3"],
             "base": {
                 "justifyContent": "flex-start"
@@ -10,6 +11,7 @@
             }
         },
         "level-2":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
                 "justifyContent": "flex-start"
@@ -19,6 +21,7 @@
             }
         },
         "level-3":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
                 "justifyContent": "center"
@@ -28,6 +31,7 @@
             }
         },
         "level-4":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
                 "justifyContent": "space-between"
@@ -37,6 +41,7 @@
             }
         },
         "level-5":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
                 "justifyContent": "space-between"
@@ -46,16 +51,19 @@
             }
         },
         "level-6":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "justifyContent": "center",
                 "alignItems": "flex-start"
             },
             "answer":{
+                "justifyContent": "center",
                 "alignItems": "center"
             }
         },
         "level-7":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "alignItems": "flex-start"
@@ -65,6 +73,7 @@
             }
         },
         "level-8":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "justifyContent": "flex-start",
@@ -76,6 +85,7 @@
             }
         },
         "level-9":{
+            "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "justifyContent": "space-evenly",
@@ -85,11 +95,53 @@
                 "justifyContent": "center",
                 "alignItems": "flex-end"
             }
+        },
+        "level-10":{
+            "parentStyles": false,
+            "childIndex": 0,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "order": "1"
+            },
+            "answer":{
+                "order": "2"  
+            }
+        },
+        "level-11":{
+            "parentStyles": false,
+            "childIndex": 1,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "alignSelf": "flex-start"
+            },
+            "answer":{
+                "alignSelf": "center"  
+            }
+        },
+        "level-12":{
+            "parentStyles": false,
+            "childIndex": 2,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "alignSelf": "flex-start"
+            },
+            "answer":{
+                "order": "-1",
+                "alignSelf": "flex-end"  
+            }
+        },
+        "level-13":{
+            "parentStyles": false,
+            "childIndex": 1,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "alignSelf": "flex-start"
+            },
+            "answer":{
+                "order": "3",
+                "alignSelf": "flex-end"  
+            }
         }
-
-        
-
-
 
     }
 }
