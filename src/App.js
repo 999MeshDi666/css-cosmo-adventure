@@ -44,10 +44,10 @@ const Spaceship = ({color}) =>{
 }
 
 function App() {
-
   const [counter, setCounter] = useState(1);
   const [text, setText] = useState("");
   const [styles, setStyles] = useState({});
+  const [animation, setAnimation] = useState(false);
   const level = levels['levels'][`level-${counter}`];
 
   const camelCase = str => str.replace(/-(.)/g, (_,p) => p.toUpperCase())
@@ -61,7 +61,11 @@ function App() {
   const handleSetText = (e) =>{
     setText(e.target.value)
   }
- 
+  
+  const handleLevelOption = (e) =>{
+    // console.log(typeof Number(e.target.value))
+    setCounter(_.toNumber(e.target.value))
+  }
   useEffect(() =>{
     const reactInlineCSS = css2obj`${text}`;
     setStyles(reactInlineCSS)
@@ -69,12 +73,22 @@ function App() {
   },[text])
   
   const handleCheckStyles = () =>{
+    let maxLvl = Object.keys(levels['levels']).length;
 
     if(_.isEqual(styles, level.answer)){
-      console.log("Правильно")
-      setCounter(prevCounter => prevCounter + 1)
+      if(counter < maxLvl){
+        console.log("Правильно")
+        setCounter(prevCounter => prevCounter + 1)
+      }
+      else{
+        setCounter(maxLvl)
+      }  
     }
     else{
+      setAnimation(prevState => !prevState);
+      setTimeout(()=> 
+        setAnimation(prevState => !prevState)
+      ,1000)
       console.log("Ты параша")
     }
   
@@ -82,14 +96,20 @@ function App() {
     setText("")
   
   }
- 
+  
   return (
     <div className="App">
         <Container>
            <Row>
               <Col xs={12} lg={6}>
-                <div className='input-wrapper'>
+                <div className={`input-wrapper ${animation? 'vibration': ""}`}>
+                  <select onChange={handleLevelOption} value={counter}>
+                    {Object.keys(levels['levels']).map((level)=>
+                      <option value={level.substring(6)} key={level}>{level}</option>
+                    )}
+                  </select>
                   <p>current level: {counter}</p>
+
                   <textarea 
                     name="text" 
                     id="text"
@@ -114,7 +134,7 @@ function App() {
                                   index === level.childIndex? 
                                       _.isEmpty(styles) ? level.base : styles 
                                 : null }
-                        > 
+                      > 
                         <Astronaut color={color}/>
                       </div> 
                     )} 

@@ -54,7 +54,6 @@
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
-                "justifyContent": "center",
                 "alignItems": "flex-start"
             },
             "answer":{
@@ -76,7 +75,6 @@
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
-                "justifyContent": "flex-start",
                 "alignItems":"flex-start"
             },
             "answer":{
@@ -97,6 +95,54 @@
             }
         },
         "level-10":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "flexDirection": "row"
+            },
+            "answer":{
+                "flexDirection": "column",
+                "justifyContent": "flex-end"
+            }
+        },
+        "level-11":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "flexDirection": "row"
+            },
+            "answer":{
+                "flexDirection": "row-reverse",
+                "alignItems": "flex-end"
+            }
+        },
+        "level-12":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "flexDirection": "column"
+            },
+            "answer":{
+                "flexDirection": "column-reverse",
+                "justifyContent": "space-between",
+                "alignItems": "center"
+            }
+        },
+        "level-13":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
+            "base": {
+                "flexDirection": "row-reverse",
+                "alignItems": "center",
+                "justifyContent": "space-around"
+            },
+            "answer":{
+                "flexDirection": "column-reverse",
+                "justifyContent": "space-evenly",
+                "alignItems": "flex-end"
+            }
+        },
+        "level-14":{
             "parentStyles": false,
             "childIndex": 0,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -107,7 +153,7 @@
                 "order": "2"  
             }
         },
-        "level-11":{
+        "level-15":{
             "parentStyles": false,
             "childIndex": 1,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -118,7 +164,7 @@
                 "alignSelf": "center"  
             }
         },
-        "level-12":{
+        "level-16":{
             "parentStyles": false,
             "childIndex": 2,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -130,7 +176,7 @@
                 "alignSelf": "flex-end"  
             }
         },
-        "level-13":{
+        "level-17":{
             "parentStyles": false,
             "childIndex": 1,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -141,7 +187,117 @@
                 "order": "3",
                 "alignSelf": "flex-end"  
             }
+        },
+        "level-18":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "flexWrap": "nowrap" 
+            },
+            "answer":{
+                "flexWrap": "wrap",
+                "alignItems": "center"
+            }
+        },
+        "level-19":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "flexWrap": "nowrap",
+                "flexDirection": "column",
+                "alignItems": "flex-end"
+            },
+            "answer":{
+                "flexWrap": "wrap-reverse",
+                "flexDirection": "column-reverse",
+                "alignItems": "flex-end"
+            }
+        },
+        "level-20":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "flexDirection": "column",
+                "alignItems": "flex-end"
+            },
+            "answer":{
+                "flexWrap": "wrap-reverse",
+                "flexDirection": "row-reverse",
+                "alignItems": "flex-end"
+            }
+        },
+        "level-21":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "alignContent": "flex-start"
+            },
+            "answer":{
+                "alignContent": "center"
+            }
+        },
+        "level-22":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "alignContent": "flex-start"
+            },
+            "answer":{
+                "alignContent": "flex-end"
+            }
+        },
+        "level-23":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "alignContent": "center",
+                "justifyContent": "space-around"
+                
+            },
+            "answer":{
+                "alignContent": "space-between",
+                "justifyContent": "center"
+            }
+        },
+        "level-24":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "alignContent": "center",
+                "flexDirection": "column"
+            },
+            "answer":{
+                "alignContent": "space-around",
+                "flexDirection": "column-reverse"
+            }
+        },
+        "level-25":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "alignContent": "space-around",
+                "flexDirection": "row"
+            },
+            "answer":{
+                "alignContent": "space-evenly",
+                "flexDirection": "column",
+                "flexWrap": "wrap-reverse"
+            }
+        },
+        "level-26":{
+            "parentStyles": true,
+            "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
+            "base": {
+                "alignContent": "space-between",
+                "flexDirection": "column",
+                "justifyContent": "flex-end"
+            },
+            "answer":{
+                "alignContent": "flex-end",
+                "flexDirection": "row-reverse",
+                "flexWrap": "wrap-reverse",
+                "justifyContent": "space-around"
+            }
         }
-
     }
 }

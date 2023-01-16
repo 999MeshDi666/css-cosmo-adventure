@@ -43,6 +43,7 @@ code {
 }
 .pond,.background{
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   top: 0;
   left: 0;
@@ -50,9 +51,9 @@ code {
   height: 100%;
   padding: 1em;
 }
-/* .astronaut{
-  background-color: #8fa5c3;
-} */
+.astronaut{
+  background-color: #d882d5;
+}
 #astronaut0 {
   order: 1;
 }
@@ -70,4 +71,21 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.vibration{
+  animation: vibration 1s 1;
+}
+
+@keyframes vibration {
+  0%,50%,100%{
+    transform: rotateZ(0deg);
+  }
+  40%{
+    transform: rotateZ(-4deg);
+  }
+  60%{
+    transform: rotateZ(4deg);
+  }
+ 
 }
