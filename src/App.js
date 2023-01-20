@@ -45,13 +45,16 @@ const Spaceship = ({color}) =>{
 
 function App() {
 
-  const currentLevel = localStorage.getItem("currentLevel")
+  const checkedStyles = JSON.parse(localStorage.getItem("checkedStyles"));
+  const completedLevels = JSON.parse(localStorage.getItem("completedLevels"));
+  const currentLevel = localStorage.getItem("currentLevel");
   const [curLvl, setCurLvl] = useState(currentLevel? _.toNumber(currentLevel) : 1);
+  const [completedLevel, setCompletedLevels] = useState(completedLevels? completedLevels : ["level-1"]);
 
   const [text, setText] = useState("");
   const [styles, setStyles] = useState({});
-
-
+  // const [checkedStyle, setCheckedStyle] = useState(checkedStyles? checkedStyles : []);
+ 
   const [animation, setAnimation] = useState(false);
   const level = levels['levels'][`level-${curLvl}`];
 
@@ -67,7 +70,7 @@ function App() {
   }
  
   const handleLevelOption = (e) =>{
-    // console.log(typeof Number(e.target.value))
+
     setCurLvl(_.toNumber(e.target.value))
   }
   useEffect(() =>{
@@ -86,6 +89,12 @@ function App() {
       else{
         setCurLvl(prevLvl => prevLvl + 1)
       }  
+      console.log("Правильно")
+      
+      // if(!checkedStyle.includes(text)){
+      //   setCheckedStyle(prevState => [...prevState, text])
+      // }
+    
     }
     else{
       setAnimation(prevState => !prevState);
@@ -93,16 +102,27 @@ function App() {
         setAnimation(prevState => !prevState)
       ,1000)
       console.log("Ты параша")
-    }
-  
+    }  
+    
     setStyles({})
     setText("")
     
   }
   useEffect(()=>{
     localStorage.setItem("currentLevel", curLvl);
+
+    if(!completedLevel.includes(`level-${curLvl}`)){
+      setCompletedLevels(prevState => [...prevState, `level-${curLvl}`])
+    }
+    // localStorage.setItem("checkedStyles", JSON.stringify(checkedStyle));
  },[curLvl])
 
+ useEffect(()=>{
+  
+  localStorage.setItem("completedLevels", JSON.stringify(completedLevel));
+
+ },[completedLevel])
+  // console.log("curLvl", completedLevel);
   return (
     <div className="App">
         <Container>
@@ -111,7 +131,12 @@ function App() {
                 <div className={`input-wrapper ${animation? 'vibration': ""}`}>
                   <select onChange={handleLevelOption} value={curLvl}>
                     {Object.keys(levels['levels']).map((level)=>
-                      <option value={level.substring(6)} key={level}>{level}</option>
+                      <option 
+                        value={level.substring(6)} 
+                        key={level}
+                        disabled={completedLevel.includes(level)? false : true}
+                        >{level}
+                      </option>
                     )}
                   </select>
                   <p>current level: {curLvl}</p>
