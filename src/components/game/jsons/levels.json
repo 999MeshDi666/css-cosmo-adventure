@@ -265,6 +265,7 @@
             "base": {
                 "alignContent": "center",
                 "flexDirection": "column"
+
             },
             "answer":{
                 "alignContent": "space-around",
