@@ -1,5 +1,5 @@
 
-import desc from "./jsons/descriptions.json";
+import desc from "../../json/descriptions.json";
 
 const Description = () =>{
     const descs = desc.ru["level-5"]

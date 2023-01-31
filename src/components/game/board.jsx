@@ -1,16 +1,15 @@
-import { useContext } from 'react';
-import { HandlerContext } from './context';
+import { useSelector} from "react-redux";
 import { Astronaut, Spaceship } from './characters';
 import _ from "lodash";
 
 
 const Board = ({level}) => {
-    const {curLvl, styles} = useContext(HandlerContext);
+    const style = useSelector((state) => state.style.value);
     return (
         <div className="board">
             <div className="pond" 
-                style={ level.parentStyles ? 
-                    (_.isEmpty(styles) ? level.base : styles) : null
+                style={level.parentStyles ? 
+                    (_.isEmpty(style) ? level.base : style) : null
                 }
             >
                 {level.colors.map((color, index) => (
@@ -21,7 +20,7 @@ const Board = ({level}) => {
                         style={
                         !level.parentStyles && 
                             index === level.childIndex? 
-                                (_.isEmpty(styles)? level.base : styles) 
+                                (_.isEmpty(style)? level.base : style) 
                                 : null
                         }
                     >
