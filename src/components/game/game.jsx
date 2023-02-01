@@ -16,7 +16,7 @@ const GamePage = () => {
       <Container>
         <Row>
           <Col xs={12} lg={6} className="mt-5">
-            <Description/>
+            <Description levelsList={levelsList} />
             <CodePanel 
               levelsList={levelsList} 
               level = {level}
