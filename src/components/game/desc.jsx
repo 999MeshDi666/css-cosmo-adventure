@@ -1,20 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { useSelector, useDispatch} from "react-redux";
 import { setLevel } from "../../store/levelSlice";
 
 import desc from "../../json/descriptions.json";
-
+import { Popover } from 'bootstrap/dist/js/bootstrap.esm.min.js';
 const Description = ({levelsList}) =>{
 
     const curLvl = useSelector((state) => state.level.value);
     const dispatch = useDispatch();
+    
 
     const completedLevels = JSON.parse(localStorage.getItem("completedLevels"));
     const [completedLevel, setCompletedLevels] = useState(
       completedLevels ? completedLevels : ["level-1"]
     );
     const descs = desc.ru[`level-${curLvl}`]
-
+    
     const handleLevelOption = (e) => {
         dispatch(setLevel(Number(e.target.value)));
     }
@@ -32,6 +33,10 @@ const Description = ({levelsList}) =>{
     }, [completedLevel]);
       
   
+    useEffect(() => {
+        Array.from(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        .forEach(popoverNode => new Popover(popoverNode))
+    })
     return(
         <div>
             <div>
@@ -51,13 +56,13 @@ const Description = ({levelsList}) =>{
                 </select>
             </div>
             <div className="desc">
-            <p>{descs.text1}</p>
-            <p>{descs.text2}</p>
+            <p dangerouslySetInnerHTML={{__html:descs.text1}}></p>
             <ul>
                 {descs.list.map((elem, index)=>
                     <li key={index}>{elem}</li>
                 )}
             </ul>
+            <p dangerouslySetInnerHTML={{__html:descs.text2}}></p>
         </div>
         </div>
         
