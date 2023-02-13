@@ -7,7 +7,7 @@ const Board = ({level}) => {
     const style = useSelector((state) => state.style.value);
     return (
         <div className="board">
-            <div className="pond" 
+            <div className="foreground" 
                 style={level.parentStyles ? 
                     (_.isEmpty(style) ? level.base : style) : null
                 }

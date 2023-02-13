@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { increment } from "../../store/levelSlice";
 import { setText } from "../../store/textSlice";
 import { setStyle } from "../../store/styleSlice";
-import { css2obj } from "./css2obj";
+import { css2obj } from "../../utils/converters";
 import _ from "lodash";
 
 const CodePanel = ({ levelsList, level }) => {

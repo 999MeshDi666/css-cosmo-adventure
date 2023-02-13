@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setLevel } from "../../store/levelSlice";
 import { Tooltip } from "bootstrap/dist/js/bootstrap.esm.min.js";
-
+import { replaceKeyWordToTag } from "../../utils/converters";
 import desc from "../../json/descriptions.json";
 
 const Description = ({ levelsList }) => {
@@ -14,8 +14,8 @@ const Description = ({ levelsList }) => {
     completedLevels ? completedLevels : ["level-1"]
   );
 
-  const descLevels = desc.kz.levels[`level-${curLvl}`];
-  const descriptions = desc.kz.descriptions;
+  const descLevels = desc.ru.levels[`level-${curLvl}`];
+  const descriptions = desc.ru.descriptions;
   const handleLevelOption = (e) => {
     dispatch(setLevel(Number(e.target.value)));
   };
@@ -37,24 +37,7 @@ const Description = ({ levelsList }) => {
     );
   });
 
-  const replaceKeyWordToTag = (text) => {
-    const keyWords = Object.keys(descriptions).filter((elem) =>
-      text.includes(elem)
-    );
-
-    const textList = text.split(" ");
-    const toolTip = textList.map((word) => {
-      const regEx = /[|.|,]/;
-      const keyWord = word.replace(regEx, "");
-      const tag = `<span class="key-words" data-bs-toggle="popover" data-bs-placement="top" title="${descriptions[keyWord]}"> ${keyWord}</span>`;
-
-      const elem = keyWords.includes(keyWord)
-        ? word.replace(keyWord, tag)
-        : word;
-      return elem;
-    });
-    return keyWords.length !== 0 ? toolTip.join(" ") : text;
-  };
+ 
 
   return (
     <div>
@@ -74,20 +57,21 @@ const Description = ({ levelsList }) => {
       <div className="desc">
         <p
           dangerouslySetInnerHTML={{
-            __html: replaceKeyWordToTag(descLevels.text1),
+            __html: replaceKeyWordToTag(descLevels.text1, descriptions),
           }}
         ></p>
         <ul>
           {descLevels.list.map((elem, index) => (
             <li
               key={index}
-              dangerouslySetInnerHTML={{ __html: replaceKeyWordToTag(elem) }}
+              dangerouslySetInnerHTML={{ 
+                __html: replaceKeyWordToTag(elem, descriptions) }}
             ></li>
           ))}
         </ul>
         <p
           dangerouslySetInnerHTML={{
-            __html: replaceKeyWordToTag(descLevels.text2),
+            __html: replaceKeyWordToTag(descLevels.text2, descriptions),
           }}
         ></p>
       </div>
