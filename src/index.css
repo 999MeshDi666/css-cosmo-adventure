@@ -79,7 +79,13 @@ code {
 .vibration{
   animation: vibration 1s 1;
 }
-
+.key-words{
+  font-weight: bold;
+  text-decoration: underline;
+}
+.key-words:hover{
+  color: rgb(31, 31, 31);
+}
 @keyframes vibration {
   0%,50%,100%{
     transform: rotateZ(0deg);

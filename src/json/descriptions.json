@@ -1,194 +1,567 @@
 {
-    "ru":{
-        "level-1":{
-            "text1": "Приветствую тебя на борту корабля, космонавт. Поскольку ты еще новичок, тебе еще рано выходить в открытый космос. Для тебя есть другая задача. Ты будешь задавать направления, устанавливать позиции другим космонавтам, чтобы они добрались до своих кораблей. Панель управляется с помощью CSS кода. Для того чтобы указать направление надо использовать flex box.",
-            "text2": "Используй свойство <b data-bs-toggle=\"popover\" data-bs-placement=\"top\" title=\"I am popover\" data-bs-content=\"Left popover\"> justify-content </b>, чтобы помочь этому космонавту добраться до своего корабля.",
-            "list": [
-                "flex-start - элементы выравниваются к началу контейнера (по левой стороне)",
-                "flex-end -  элементы выравниваются к концу контейнера (по правой стороне)",
-                "center - элементы выравниваются по центру",
-                "space-between - между элементами устанавливается одинаковый отступ. Первый и последний элементы прижаты к началу и к концу контейнера.",
-                "space-around - вокруг элементов устанавливается одинаковый отступ. Появляется пространство вокруг элементов.",
-                "space-evenly - отступы элементов устанавливаются равномерно. Работает как space-around, но элементы прижаты к середине и имеют отступы между собой."
-            ]
-        },
-        "level-2":{
-            "text1": "Теперь их двое. Используй justify-content снова, чтобы помочь им добраться до кораблей.",
-            "text2": "",
-            "list": []
-        },
-        "level-3":{
-            "text1": "Теперь корабли стоят по краям,а космонавты между ними по центру.",
-            "text2": "У justify-content как раз имеется нужное нам значение для такого случая.",
-            "list": []
-        },
-        "level-4":{
-            "text1": "Используй одно из значений justify-content, чтобы помочь им добраться до кораблей.",
-            "text2": "",
-            "list": []
-        },
-        "level-5":{
-            "text1": "Используй одно из значений justify-content, чтобы помочь им добраться до кораблей.",
-            "text2": "",
-            "list": []
-        },
-        "level-6":{
-            "text1": "К команде присоединяется третий космонавт. И они находятся вдали от кораблей. На мониторе видно, что корабли стоят в центре.",
-            "text2": "Направь космонавтов в центр к кораблям используя свойство align-items, помимо этого используй justify-content, чтобы выровнить космонавтов по центру.",
-            "list": [
-                "flex-start - выравнивает элементы по вертикали к началу контейнера (к верхней части)",
-                "flex-end - выравнивает элементы по вертикали к концу контейнера (к нижней части)",
-                "center - выравнивает элементы по вертикали по центру",
-                "baseline - выравнивает элементы по базовой линии",
-                "stretch - растягивает элементы занимая все пространство контейнера"
-            ]
-        },
-        "level-7":{
-            "text1": " Космонавты отошли от своих кораблей совсем далеко, используй align-items, чтобы они добрались до кораблей.",
-            "text2": "",
-            "list": []
-        },
-        "level-8":{
-            "text1": "Космонавтам нужна твоя помощь! Помоги им добраться до кораблей используя align-items и justify-content.",
-            "text2": "",
-            "list": []
-        },
-        "level-9":{
-            "text1": "Помоги космонавтам собраться и дойти до кораблей. Используй align-items, чтобы они добрались.",
-            "text2": "",
-            "list": []
-        },
-        "level-10":{
-            "text1": " Посмотри на панель, знаешь как выстроить их в колонну? Для этого тебе надо использовать свойство flex-direction.",
-            "text2": "На заметку, когда мы устанавливаем значение flex-direction как reverse, то start и end меняются.",
-            "list": [
-                "row - элементы выравниваются в строку, слева направо (по направлению текста)",
-                "row-reverse - элементы выравниваются в обратном порядке, справа налево",
-                "column - элементы выравниваются в колонну",
-                "column-reverse - элементы выравниваются в колонну, в обратном порядке "
-            ]
-        },
-        "level-11":{
-            "text1": "Смотри, корабли выстроены в обратном порядке и находятся далеко от космонавтов. Используй flex-direction и align-items, чтобы они смогли добраться.",
-            "text2": "",
-            "list": []
-        },
-        "level-12":{
-            "text1": "Помоги космонавтам добраться до корабля.",
-            "text2": "Прошу заметить, что когда мы устанавливаем flex-direction как column, justify-content начинает выравнивать по вертикали, а align-items по горизонтали.",
-            "list": []
-        },
-        "level-13":{
-            "text1": "Помоги космонавтам используя ранее пройденные тобой свойства. justify-content, align-items, flex-direction",
-            "text2": "",
-            "list": [
-                "justify-content", 
-                "align-items",
-                "flex-direction"
-            ]
-        },
-        "level-14":{
-            "text1": " Космонавты дошли до своих кораблей, но стоят не по порядку. Для того чтобы они встали как надо, используй свойство order.",
-            "text2": "В этом примере белый космонавт имеет порядок order 1, розовый космонавт имеет order 2. Какое значение нужно дать белому космонавту, чтобы сместить розового космонавта назад?",
-            "list": [
-                "Стандартное значение order 0",
-                "Можно устанавливать положительные значения order 1, для сдвига вперед", 
-                "Можно устанавливать отрицательные  значения order -1, для сдвига назад"
-            ]
-        },
-        "level-15":{
-            "text1": "На мониторе видно, что розовый космонавт припарковался  по центру. Для того чтобы направить только розового космонавта к центру используй свойство align-self.",
-            "text2": "",
-            "list": [
-                "flex-start - выравнивает элемент по вертикали к началу контейнера (к верхней части)",
-                "flex-end - выравнивает элемент по вертикали к концу контейнера (к нижней части)",
-                "center - выравнивает элемент по вертикали по центру",
-                "baseline - выравнивает элемент по базовой линии",
-                "stretch - растягивает элемент занимая все пространство контейнера"
-            ]
-        },
-        "level-16":{
-            "text1": "Синий космонавт оставил свой корабль на первом ряду, в самом конце. Помоги ему добраться до своего корабля.",
-            "text2": "",
-            "list": []
-        },
-        "level-17":{
-            "text1": "Поменяй порядок розового космонавта и дай направление только ему, чтобы он добрался до своего корабля.",
-            "text2": "",
-            "list": []
-        },
-        "level-18":{
-            "text1": "У тебя хорошо получается. Если ты в состоянии работать с тремя космонавтами, значит можно тебе доверить и восьмерых!  Сейчас космонавты выстроены в одну линию, в один ряд, чтобы часть из них выстроилась на другую, используй свойство flex-wrap.",
-            "text2": "Помимо этого свойства используй align-items, чтобы они встали по центру.",
-            "list": [
-                "nowrap - элементы выстраиваются в одну линию",
-                "wrap - часть элементов переносится на новую строку",
-                "wrap-reverse - часть элементов переносится на новую строку, в обратном порядке"
-            ]
-        },
-        "level-19":{
-            "text1": "Теперь космонавты выстроились в колонну, помоги космонавтам распределиться по кораблям. Используй свойства flex-wrap, flex-direction, align-items.",
-            "text2": "",
-            "list": []
-        },
-        "level-20":{
-            "text1": "Встали они конечно красиво, но не по своим кораблям…Распредели их так чтобы каждый стоял на своем корабле.",
-            "text2": "",
-            "list": []
-        },
-        "level-21":{
-            "text1": "Давай познакомимся с новым свойством которое называется align-content. Align-content похож на align-items, но есть различия. Align-items отвечает за то, как элементы  в целом будут выровнены в контейнере, align-content отвечает за расстояние между рядами элементов, за то, как несколько рядов должны отделяться друг от друга.Также align-content работает только когда есть flex-wrap. То есть когда появляются ряды.",
-            "text2": "",
-            "list": [
-                "flex-start - ряды устанавливаются в верхней части контейнера",
-                "flex-end - ряды устанавливаются в нижней части контейнера",
-                "center -  ряды устанавливаются по центру",
-                "space-between - между рядами появляется расстояние. Первый и последний ряд прижимаются к верхней и нижней части.",
-                "space-around - вокруг рядов появляется расстояние.",
-                "space-evenly - расстояние элементов устанавливаются равномерно.",
-                "stretch - ряды равномерно растягиваются заполняя свободное пространство"
-
-            ]
-        },
-        "level-22":{
-            "text1": "Используй align-content, чтобы ряд встал в нижнюю часть контейнера",
-            "text2": "",
-            "list": []
-        },
-        "level-23":{
-            "text1": "Помоги космонавтам добраться до кораблей используя align-content и justify-content.",
-            "text2": "",
-            "list": []
-        },
-        "level-24":{
-            "text1": "Теперь они встали в колонну. Используй align-content и flex-direction, чтобы каждый стоял на своем корабле.",
-            "text2": "",
-            "list": []
-        },
-        "level-25":{
-            "text1": "Поздравляю, пришла новость о том, что ты можешь выходить в космос и совершать экспедиции по планетам, но перед этим ты должен отработать, осталось немного, это нужно чтобы ты закрепил навыки и смог работать в дальнейшем.",
-            "text2": "Используи нужные своиства чтобы космонавты встали по кораблям.",
-            "list": [
-                "flex-wrap",
-                "align-content",
-                "flex-direction"
-            ]
-        },
-        "level-26":{
-            "text1": "Это твое последнее задание. Покажи мастер класс, тому что ты научился!",
-            "text2": "Помоги космонавтам добраться до кораблей и можешь идти в ангар встречать свой собственный корабль.",
-            "list": [
-                "justify-content",
-                "flex-wrap",
-                "align-content",
-                "flex-direction"
-            ]
-        }
+  "ru": {
+    "descriptions": {
+      "justify-content": "Выравнивает элементы в контейнере горизонтально (также называется как главная ось).Еще можно сказать выравнивает вдоль главной оси контейнера",
+      "align-items": "Выравнивает элементы в контейнере вертикально. Еще можно сказать выравнивает вдоль пересекаемой оси.",
+      "flex-direction": "Задает направление основной оси, тем самым определяет положение элементов в контейнере.",
+      "order": "Указывает порядок флекс-элементов",
+      "align-self": "Выравнивает элемент в контейнере вертикально. Или же вдоль пересекаемой оси. Перекрывает значение align-items у элемента.",
+      "flex-wrap": "Определят стоит ли элементам находиться в одном ряду или же перенестись на другой ряд.",
+      "align-content": "Выравнивает ряд в контейнере вертикально. Еще можно сказать выравнивает вдоль пересекаемой оси. Работает если есть свойство flex-wrap."
     },
-    "kz":{
-        
-    },
-    "en":{
-
+    "levels": {
+      "level-1": {
+        "text1": "Приветствую тебя на борту корабля, космонавт. Поскольку ты еще новичок, тебе еще рано выходить в открытый космос. Для тебя есть другая задача. Ты будешь задавать направления, устанавливать позиции другим космонавтам, чтобы они добрались до своих кораблей. Панель управляется с помощью CSS кода. Для того чтобы указать направление надо использовать flexbox.",
+        "text2": "Используй свойство justify-content, чтобы помочь этому космонавту добраться до своего корабля.",
+        "list": [
+          "flex-start - элементы выравниваются к началу контейнера (по левой стороне)",
+          "flex-end -  элементы выравниваются к концу контейнера (по правой стороне)",
+          "center - элементы выравниваются по центру",
+          "space-between - между элементами устанавливается одинаковый отступ. Первый и последний элементы прижаты к началу и к концу контейнера.",
+          "space-around - вокруг элементов устанавливается одинаковый отступ. Появляется пространство вокруг элементов.",
+          "space-evenly - отступы элементов устанавливаются равномерно. Работает как space-around, но элементы прижаты к середине и имеют отступы между собой."
+        ]
+      },
+      "level-2": {
+        "text1": "Теперь их двое. Используй justify-content снова, чтобы помочь им добраться до кораблей.",
+        "text2": "",
+        "list": []
+      },
+      "level-3": {
+        "text1": "Теперь корабли стоят по краям,а космонавты между ними по центру.",
+        "text2": "У justify-content как раз имеется нужное нам значение для такого случая.",
+        "list": []
+      },
+      "level-4": {
+        "text1": "Используй одно из значений justify-content, чтобы помочь им добраться до кораблей.",
+        "text2": "",
+        "list": []
+      },
+      "level-5": {
+        "text1": "Используй одно из значений justify-content, чтобы помочь им добраться до кораблей.",
+        "text2": "",
+        "list": []
+      },
+      "level-6": {
+        "text1": "К команде присоединяется третий космонавт. И они находятся вдали от кораблей. На мониторе видно, что корабли стоят в центре.",
+        "text2": "Направь космонавтов в центр к кораблям используя свойство align-items, помимо этого используй justify-content, чтобы выровнить космонавтов по центру.",
+        "list": [
+          "flex-start - выравнивает элементы по вертикали к началу контейнера (к верхней части)",
+          "flex-end - выравнивает элементы по вертикали к концу контейнера (к нижней части)",
+          "center - выравнивает элементы по вертикали по центру",
+          "baseline - выравнивает элементы по базовой линии",
+          "stretch - растягивает элементы занимая все пространство контейнера"
+        ]
+      },
+      "level-7": {
+        "text1": " Космонавты отошли от своих кораблей совсем далеко, используй align-items, чтобы они добрались до кораблей.",
+        "text2": "",
+        "list": []
+      },
+      "level-8": {
+        "text1": "Космонавтам нужна твоя помощь! Помоги им добраться до кораблей используя align-items и justify-content.",
+        "text2": "",
+        "list": []
+      },
+      "level-9": {
+        "text1": "Помоги космонавтам собраться и дойти до кораблей. Используй align-items, чтобы они добрались.",
+        "text2": "",
+        "list": []
+      },
+      "level-10": {
+        "text1": " Посмотри на панель, знаешь как выстроить их в колонну? Для этого тебе надо использовать свойство flex-direction.",
+        "text2": "На заметку, когда мы устанавливаем значение flex-direction как reverse, то start и end меняются.",
+        "list": [
+          "row - элементы выравниваются в строку, слева направо (по направлению текста)",
+          "row-reverse - элементы выравниваются в обратном порядке, справа налево",
+          "column - элементы выравниваются в колонну",
+          "column-reverse - элементы выравниваются в колонну, в обратном порядке "
+        ]
+      },
+      "level-11": {
+        "text1": "Смотри, корабли выстроены в обратном порядке и находятся далеко от космонавтов. Используй flex-direction и align-items, чтобы они смогли добраться.",
+        "text2": "",
+        "list": []
+      },
+      "level-12": {
+        "text1": "Помоги космонавтам добраться до корабля.",
+        "text2": "Прошу заметить, что когда мы устанавливаем flex-direction как column, justify-content начинает выравнивать по вертикали, а align-items по горизонтали.",
+        "list": []
+      },
+      "level-13": {
+        "text1": "Помоги космонавтам используя ранее пройденные тобой свойства. justify-content, align-items, flex-direction.",
+        "text2": "",
+        "list": ["justify-content", "align-items", "flex-direction"]
+      },
+      "level-14": {
+        "text1": " Космонавты дошли до своих кораблей, но стоят не по порядку. Для того чтобы они встали как надо, используй свойство order.",
+        "text2": "В этом примере белый космонавт имеет порядок order 1, розовый космонавт имеет order 2. Какое значение нужно дать белому космонавту, чтобы сместить розового космонавта назад?",
+        "list": [
+          "Стандартное значение order 0",
+          "Можно устанавливать положительные значения order 1, для сдвига вперед",
+          "Можно устанавливать отрицательные  значения order -1, для сдвига назад"
+        ]
+      },
+      "level-15": {
+        "text1": "На мониторе видно, что розовый космонавт припарковался  по центру. Для того чтобы направить только розового космонавта к центру используй свойство align-self.",
+        "text2": "",
+        "list": [
+          "flex-start - выравнивает элемент по вертикали к началу контейнера (к верхней части)",
+          "flex-end - выравнивает элемент по вертикали к концу контейнера (к нижней части)",
+          "center - выравнивает элемент по вертикали по центру",
+          "baseline - выравнивает элемент по базовой линии",
+          "stretch - растягивает элемент занимая все пространство контейнера"
+        ]
+      },
+      "level-16": {
+        "text1": "Синий космонавт оставил свой корабль на первом ряду, в самом конце. Помоги ему добраться до своего корабля.",
+        "text2": "",
+        "list": []
+      },
+      "level-17": {
+        "text1": "Поменяй порядок розового космонавта и дай направление только ему, чтобы он добрался до своего корабля.",
+        "text2": "",
+        "list": []
+      },
+      "level-18": {
+        "text1": "У тебя хорошо получается. Если ты в состоянии работать с тремя космонавтами, значит можно тебе доверить и восьмерых!  Сейчас космонавты выстроены в одну линию, в один ряд, чтобы часть из них выстроилась на другую, используй свойство flex-wrap.",
+        "text2": "Помимо этого свойства используй align-items, чтобы они встали по центру.",
+        "list": [
+          "nowrap - элементы выстраиваются в одну линию",
+          "wrap - часть элементов переносится на новую строку",
+          "wrap-reverse - часть элементов переносится на новую строку, в обратном порядке"
+        ]
+      },
+      "level-19": {
+        "text1": "Теперь космонавты выстроились в колонну, помоги космонавтам распределиться по кораблям. Используй свойства flex-wrap, flex-direction, align-items.",
+        "text2": "",
+        "list": []
+      },
+      "level-20": {
+        "text1": "Встали они конечно красиво, но не по своим кораблям… Распредели их так чтобы каждый стоял на своем корабле.",
+        "text2": "",
+        "list": []
+      },
+      "level-21": {
+        "text1": "Давай познакомимся с новым свойством которое называется align-content. Align-content похож на align-items, но есть различия. Align-items отвечает за то, как элементы  в целом будут выровнены в контейнере, align-content отвечает за расстояние между рядами элементов, за то, как несколько рядов должны отделяться друг от друга.Также align-content работает только когда есть flex-wrap. То есть когда появляются ряды.",
+        "text2": "",
+        "list": [
+          "flex-start - ряды устанавливаются в верхней части контейнера",
+          "flex-end - ряды устанавливаются в нижней части контейнера",
+          "center -  ряды устанавливаются по центру",
+          "space-between - между рядами появляется расстояние. Первый и последний ряд прижимаются к верхней и нижней части.",
+          "space-around - вокруг рядов появляется расстояние.",
+          "space-evenly - расстояние рядов устанавливаются равномерно.",
+          "stretch - ряды равномерно растягиваются заполняя свободное пространство"
+        ]
+      },
+      "level-22": {
+        "text1": "Используй align-content, чтобы ряд встал в нижнюю часть контейнера",
+        "text2": "",
+        "list": []
+      },
+      "level-23": {
+        "text1": "Помоги космонавтам добраться до кораблей используя align-content и justify-content.",
+        "text2": "",
+        "list": []
+      },
+      "level-24": {
+        "text1": "Теперь они встали в колонну. Используй align-content и flex-direction, чтобы каждый стоял на своем корабле.",
+        "text2": "",
+        "list": []
+      },
+      "level-25": {
+        "text1": "Поздравляю, пришла новость о том, что ты можешь выходить в космос и совершать экспедиции по планетам, но перед этим ты должен отработать, осталось немного, это нужно чтобы ты закрепил навыки и смог работать в дальнейшем.",
+        "text2": "Используи нужные своиства чтобы космонавты встали по кораблям.",
+        "list": ["flex-wrap", "align-content", "flex-direction"]
+      },
+      "level-26": {
+        "text1": "Это твое последнее задание. Покажи мастер класс, тому что ты научился!",
+        "text2": "Помоги космонавтам добраться до кораблей и можешь идти в ангар встречать свой собственный корабль.",
+        "list": [
+          "justify-content",
+          "flex-wrap",
+          "align-content",
+          "flex-direction"
+        ]
+      }
     }
+  },
+  "kz": {
+    "descriptions": {
+      "justify-content": "Контейнердегі элементтерді көлденең (немесе негізгі ось деп атауға болады) реттейді .Контейнердің негізгі осі бойымен реттеледі деп айтуға болады",
+      "align-items": "Контейнердегі элементтерді тігінен (немесе қиылысатын ось деп атауға болады) реттейді. Сондай-ақ, қиылысатын ось бойымен реттеледі деп айтуға болады.",
+      "flex-direction": "Негізгі осьтің бағытын анықтайды, осылайша контейнердегі элементтердің орнын анықтайды.",
+      "order": "Элементтердің ретін көрсетеді",
+      "align-left": "Контейнердегі элементті тігінен реттейді. Немесе қиылысатын ось бойымен. Элементтің align-items мәнімен қабаттасады.",
+      "flex-wrap": "Элементтердің бір қатарда болуы немесе басқа қатарға ауысуы керек екенін анықтайды.",
+      "align-content": "Контейнердегі жолдарды тігінен реттейді. Сондай-ақ, қиылысатын ось бойымен реттеледі деп айтуға болады. Тек flex-wrap қасиеті болғанда жұмыс істейді."
+    },
+    "levels": {
+      "level-1": {
+        "text1": "Ғарышкер, ғарыш станциясының бортында қош келдің. Сенің ғарышқа шығу туралы рұқсатың әлі келген жоқ, себебі сен осы ғарыш станциясына жаңа ғана келдің. Әзірге сен үшін басқа міндет бар. Сен басқа ғарышкерлерге өз кемелеріне жету үшін бағыт-бағдар беріп, позициялар қоясыз. Панель CSS көмегімен басқарылады. Бағытты көрсету үшін flexbox пайдалану керек. Сіз үйренетің бірінші қасиет-бұл justify-content.",
+        "text2": "Осы ғарышкерге өз кемесіне жетуге көмектесу үшін justify-content қасиетін пайдаланыңыз.",
+        "list": [
+          "flex-start - элементтер контейнердің басына (сол жағына) реттейді",
+          "flex-end - элементтері контейнердің соңына (оң  жағына) реттейді",
+          "center - элементтер ортаға реттейді",
+          "space-between - элементтер арасында бірдей шегініс орнатылады. Бірінші және соңғы элементтер контейнердің басында және соңында орнатылады.",
+          "space-around - элементтердің айналасына бірдей шегініс орнатылады. Элементтердің айналасында кеңістік пайда болады.",
+          "space-evenly - элементтердің шегіністері біркелкі орнатылады. "
+        ]
+      },
+      "level-2": {
+        "text1": "Енді космонавттар саны екеу. Кемелерге жетуге көмектесу үшін justify-content қайта пайдаланыңыз.",
+        "text2": "",
+        "list": []
+      },
+      "level-3": {
+        "text1": "Енді кемелер екі жақ шетінде, ал ғарышкерлер олардың ортасында орналасқан.",
+        "text2": "justify-content - те осындай жағдай үшін қажетті мән бар.",
+        "list": []
+      },
+      "level-4": {
+        "text1": "Кемелерге жетуге көмектесу үшін justify-content мәндерінің бірін пайдаланыңыз.",
+        "text2": "",
+        "list": []
+      },
+
+      "level-5": {
+        "text1": "Кемелерге жетуге көмектесу үшін justify-content мәндерінің бірін пайдаланыңыз.",
+        "text2": "",
+        "list": []
+      },
+      "level-6": {
+        "text1": "Топқа үшінші ғарышкер қосылады. Ғарышкерлер кемелерден алыс жақта орналасқан. Мониторда кемелер ортада тұрғанын көруге болады.",
+        "text2": "Ғарышкерлерді ортадағы кемелерге бағыттау үшін, align-items қасиетін қолдана отырып, justify-content қасиетің, ғарышкерлерді орталыққа реттеу үшін қолданыңыз.",
+        "list": [
+          "flex-start - элементтерді контейнердің басына (жоғарғы жағына) тігінен реттейді",
+          "flex-end - элементтерді контейнердің соңына (төменгі жағына) тігінен реттейді",
+          "орталық - элементтерді тігінен ортасына реттейді",
+          "baseline - элементтерді негізгі сызық бойынша реттейді",
+          "stretch -   элементтерді созып, контейнердің барлық кеңістігін алады"
+        ]
+      },
+      "level-7": {
+        "text1": "Ғарышкерлер өз кемелерінен өте алысқа кетті, ғарышкерлер туралау кемелерге жету үшін align-items қолданыңыз",
+        "text2": "",
+        "list": []
+      },
+      "level-8": {
+        "text1": "Ғарышкерлерге сіздің көмегіңіз қажет! Оларға align-items және justify-content көмегімен, кемелерге жетуге көмектесіңіз.",
+        "text2": "",
+        "list": []
+      },
+      "level-9": {
+        "text1": "Ғарышкерлерге жиналып, кемелерге жетуге көмектесіңіз.Ол үшін align-items пайдаланыңыз.",
+        "text2": "",
+        "list": []
+      },
+      "level-10": {
+        "text1": "Панельге қара, Оларды бағанға қалай салу керектігін білесін бе? Ол үшін flex-direction сипатын пайдалану керек.",
+        "text2": "flex-direction мәнін reverse ретінде орнатқан кезде, start және end өзгереді.",
+        "list": [
+          "row-элементтер жолға, солдан оңға қарай (мәтін бағыты бойынша) тураланады",
+          "row - reverse-элементтер оңнан солға қарай кері ретпен тураланады",
+          "баған-элементтер бағанға тураланады",
+          "column-reverse - элементтер бағанға кері ретпен тураланады "
+        ]
+      },
+      "level-11": {
+        "text1": "Кемелер кері тәртіпте және ғарышкерлерден алыс орналасқан. Оларға жету үшін flex-direction және align-items пайдаланыңыз.",
+        "text2": "",
+        "list": []
+      },
+      "level-12": {
+        "text1": "Ғарышкерлерге кемеге жетуге көмектес.",
+        "text2": "flex-direction баған ретінде орнатқан кезде, justify-content тігінен, ал align-items көлденеңінен реттей бастайтынын ескеруіңді сұраймын.",        
+        "list": []
+      },
+      "level-13": {
+        "text1": "Бұрын өткен қасиеттерді қолдана отырып ғарышкерлерге көмектесіңіз . justify-content, align-items, flex-direction.",
+        "text2": "",
+        "list": ["justify-content", "align-items", "flex-direction"]
+      },
+      "level-14": {
+        "text1": "Ғарышкерлер өз кемелеріне жетті, бірақ ретімен орналасқан жоқ. Олар дұрыс тұру үшін order қасиетін пайдаланыңыз.",
+        "text2": "Бұл мысалда ақ ғарышкер order 1 ретіне ие, қызғылт ғарышкер order 2-ге ие. Қызғылт ғарышкерді артқа жылжыту үшін ақ ғарышкерге қандай мән беру керек?",
+        "list": [
+            "order 0 стандартты мәні",
+            "Алға жылжу үшін order 1 оң мәндерін орнатуға болады",
+            "Артқа жылжу үшін order -1 теріс мәндерін орнатуға болады"            
+        ]
+      },
+      "level-15": {
+        "text1": "Мониторда қызғылт ғарышкердің ортасында тұрғанын көруге болады. Тек қызғылт ғарышкерді орталыққа бағыттау үшін align-self қасиетін пайдаланыңыз.",
+        "text2": "",
+        "list": [
+            "flex-start - элементті контейнердің басына (жоғарғы жағына) тігінен реттейді",
+            "flex-end - элементті контейнердің соңына (төменгі жағына) тігінен реттейді",
+            "орталық - элементті тігінен ортасына реттейді",
+            "baseline - элементті негізгі сызық бойынша реттейді",
+            "stretch - элементті созып контейнердің барлық кеңістігін алады"
+        ]
+      },
+      "level-16": {
+        "text1": "Көк ғарышкер өз кемесін алдыңғы қатарда, ең соңында қалдырды. Оған кемеге жетуге көмектесіңіз.",
+        "text2": "",
+        "list": []
+      },
+      "level-17": {
+        "text1": "Қызғылт ғарышкердің ретін өзгертіңіз және оған тек оған өз кемесіне жетуге бағыт беріңіз.",
+        "text2": "",
+        "list": []
+      },
+      "level-18": {
+        "text1": "Егер сен үш ғарышкермен жұмыс істей алсаң, онда сегіз ғарышкерді сеніп тапсыруға болады!! Қазір ғарышкерлер бір қатарда, олардың бір бөлігі екінші қатарға тұруы үшін, flex-wrap қасиетін қолданыңыз.",
+        "text2": "Осы қасиеттен басқа, Ортаға орналастыру үшін align-items пайдаланыңыз.",
+        "list": [
+            "nowrap - элементтер бір қатарға тұрады",
+            "wrap - элементтердің бір бөлігі жаңа жолға ауыстырылады",
+            "wrap-reverse - элементтердің бір бөлігі кері тәртіпте жаңа жолға ауыстырылады"
+        ]
+      },
+      "level-19": {
+        "text1": "Ғарышкерлер бағанға тізіліп тұр, енді оларды өз кемелеріне орналастыр. Ол үшін flex-wrap, flex-direction, align-items қасиеттерін пайдаланыңыз.",
+        "text2": "",
+        "list": []
+      },
+      "level-20": {
+        "text1": "Оларды әрқайсысы өз кемесінде тұратындай етіп орналастыр.",
+        "text2": "",
+        "list": []
+      },
+      "level-21": {
+        "text1": "Енді align-content деп аталатын жаңа қасиетпен танысайық. Align-content align-items-ке ұқсас, бірақ айырмашылықтар бар. Align-items элементтердің контейнерде қалай реттелетініне жауап береді, align-content элементтер қатарлары арасындағы қашықтыққа, бірнеше жолдар бір-бірінен қалай бөлінуі керек екеніне жауап береді.Сондай-ақ, align-content flex-wrap болған кезде ғана жұмыс істейді. Яғни, жаңа жолдар пайда болған кезде.",
+        "text2": "",
+        "list": [
+            "flex-start - жолдар контейнердің жоғарғы жағына орнатылады",
+            "flex-end - жолдары контейнердің астына орнатылады",
+            "center - жолдар ортаға орнатылады",
+            "space-between - жолдар арасында қашықтық пайда болады. Бірінші және соңғы қатар контейнердің басында және соңында орнатылады.",
+            "space-around - жолдардың айналасында қашықтық пайда болады.",
+            "space-evenly - жолдардың қашықтыға біркелкі орнатылады.",
+            "stretch -  жолдарды созып контейнердің барлық кеңістігін алады"            
+        ]
+      },
+      "level-22": {
+        "text1": "Жол контейнердің астына түсуі үшін align-content пайдаланыңыз",
+        "text2": "",
+        "list": []
+      },
+      "level-23": {
+        "text1": "Ғарышкерлерге кемелерге жетуге көмектесіңіз, align-content және justify-content қолданыңыз.",
+        "text2": "",
+        "list": []
+      },
+      "level-24": {
+        "text1": "Ғарышкерлер бағанға тізіліп тұр. Әркім өз кемесінде тұруы үшін align-content және flex-direction пайдаланыңыз.",
+        "text2": "",
+        "list": []
+      },
+      "level-25": {
+        "text1": "Құттықтаймыс, ғарышқа шығып, кеме арқылы  планеталарға экспедиция жасай алатының туралы жаңалық келді, бірақ бұған дейін сен біраз жұмыс істеуің керек, бұл саған өткенді бекітіп, болашақта жұмыс істей алу үшін керек.",
+        "text2": "Қажетті қасиеттерді пайдаланып, ғарышкерлерді кемелерге орналастыр.",
+        "list": ["flex-wrap", "align-content", "flex-direction"]
+      },
+      "level-26": {
+        "text1": "Бұл соңғы тапсырма. Мастер-класс көрсет, өткен қасиеттерді пайдалан!",
+        "text2": "Ғарышкерлерге кемелеріне жетуге көмектесіп, ангарда өз кеменді қарсы ал.",
+        "list": [
+          "justify-content",
+          "flex-wrap",
+          "align-content",
+          "flex-direction"
+        ]
+      }
+    }
+  },
+  "en": {
+    "descriptions": {
+      "justify-content": "Aligns elements horizontally in a container (also known as the main axis). Can also be described as aligning along the main axis of the container",
+      "align-items": "Aligns elements vertically in a container. Can also be described as aligning along the cross axis.",
+      "flex-direction": "Sets the direction of the main axis, thus determining the position of elements in a container.",
+      "order": "Indicates the order of flex elements",
+      "align-self": "Aligns an element vertically within a container. Or along the cross axis. Overrides the align-items value of the element.",
+      "flex-wrap": "Determines if elements should be in one row or be wrapped to another row.",
+      "align-content": "Aligns rows within a container vertically. Can also be described as aligning along the cross axis. Works if the flex-wrap property is present."
+    },
+    "levels": {
+      "level-1": {
+        "text1": "Welcome aboard the spaceship, astronaut. Since you are still a newcomer, it is still early for you to go out into open space. There is another task for you. You will be directing and setting positions for other astronauts so that they can reach their ships. The panel is controlled using CSS code. To indicate the direction, you need to use the flexbox.",
+        "text2": "Use the justify-content property to help this astronaut reach his ship.",
+        "list": [
+          "flex-start - elements are aligned to the start of the container (left side)",
+          "flex-end - elements are aligned to the end of the container (right side)",
+          "center - elements are aligned to the center",
+          "space-between - equal spaces are established between the elements. The first and last elements are pushed to the start and end of the container.",
+          "space-around - equal spaces are established around the elements. There is space around the elements.",
+          "space-evenly - the spaces between elements are established evenly. Works like space-around, but elements are pushed to the middle and have spaces between them."
+        ]
+      },
+      "level-2": {
+        "text1": "Now there are two of them. Use justify-content again to help them reach the ships.",
+        "text2": "",
+        "list": []
+      },
+      "level-3": {
+        "text1": "Now the ships are on the edges, and the astronauts are in the center between them.",
+        "text2": "justify-content has just the right value for such a case.",
+        "list": []
+      },
+      "level-4": {
+        "text1": "Use one of the justify-content values to help them get to the ships.",
+        "text2": "",
+        "list": []
+      },
+      "level-5": {
+        "text1": "Use one of the justify-content values to help them get to the ships.",
+        "text2": "",
+        "list": []
+      },
+      "level-6": {
+        "text1": "The third cosmonaut joins the team. And they are away from the ships. The monitor shows that the ships are in the center.",
+        "text2": "Direct astronauts to the center of the ships using the align-items property, and also use justify-content to align astronauts to the center.",
+        "list": [
+          "flex-start-aligns elements vertically to the beginning of the container (to the top)",
+          "flex-end-aligns elements vertically to the end of the container (to the bottom)",
+          "center-aligns elements vertically to the center",
+          "baseline-aligns elements to the baseline",
+          "stretch - stretches elements taking up all the space in the container"
+        ]
+      },
+      "level-7": {
+        "text1": "If the astronauts are too far away from their ships, use align-items to get them to the ships.",
+        "text2": "",
+        "list": []
+      },
+      "level-8": {
+        "text1": "Astronauts need your help! Help them get to their ships using align-items and justify-content.",
+        "text2": "",
+        "list": []
+      },
+      "level-9": {
+        "text1": "Help the astronauts pack up and reach their ships. Use align-items to get them there.",
+        "text2": "",
+        "list": []
+      },
+      "level-10": {
+        "text1": "Look at the panel, do you know how to line them up in a column? To do this, you need to use the flex-direction property.",
+        "text2": "Note that when we set the flex-direction value to reverse, the start and end values change.",
+        "list": [
+          "row-elements are aligned in a row, from left to right (in the direction of the text)",
+          "row-reverse-elements are aligned in reverse order, from right to left",
+          "column-elements are aligned to a column",
+          "column-reverse-elements are aligned in a column, in reverse order"
+        ]
+      },
+      "level-11": {
+        "text1": "Look, the ships are arranged in reverse order and are far from the astronauts. Use flex-direction and align-items to help them get there.",
+        "text2": "",
+        "list": []
+      },
+      "level-12": {
+        "text1": "Help the astronauts reach the ship.",
+        "text2": "Please note that when we set flex-direction as column, justify-content starts to align vertically and align-items horizontally.",
+        "list": []
+      },
+      "level-13": {
+        "text1": "Help the astronauts using the previously learned properties. justify-content, align-items, flex-direction.",
+        "text2": "",
+        "list": ["justify-content", "align-items", "flex-direction"]
+      },
+      "level-14": {
+        "text1": "The astronauts have reached their ships, but they are not standing in order. To have them stand properly, use the order property.",
+        "text2": "In this example, the white astronaut has an order of 1, and the pink astronaut has an order of 2. What value should the white astronaut be given to move the pink astronaut back?",
+        "list": [
+          "The standard order value of 0",
+          "Positive order values of 1 can be set to move forward",
+          "Negative order values of -1 can be set to move back"
+        ]
+      },
+      "level-15": {
+        "text1": "On the monitor, it can be seen that the pink astronaut has parked in the center. To direct only the pink astronaut to the center, use the align-self property.",
+        "text2": "",
+        "list": [
+          "flex-start - aligns the element vertically to the beginning of the container (to the top part)",
+          "flex-end - aligns the element vertically to the end of the container (to the bottom part)",
+          "center - aligns the element vertically to the center",
+          "baseline - aligns the element to the baseline",
+          "stretch - stretches the element to occupy all the space of the container"
+        ]
+      },
+      "level-16": {
+        "text1": "The blue astronaut has left his ship in the first row, at the very end. Help him get to his ship.",
+        "text2": "",
+        "list": []
+      },
+      "level-17": {
+        "text1": "Change the order of the pink astronaut and give him direction so he can reach his ship.",
+        "text2": "",
+        "list": []
+      },
+      "level-18": {
+        "text1": "You are doing well. If you are able to work with three astronauts, then you can be trusted with eight! Right now, the astronauts are lined up in one row, to make some of them line up in another, use the flex-wrap property.",
+        "text2": "In addition to this property, use align-items to make them stand in the center.",
+        "list": [
+          "nowrap - the elements remain in one line",
+          "wrap - the elements break and wrap to the next line",
+          "wrap-reverse - the elements break and wrap to the previous line"
+        ]
+      },
+      "level-19": {
+        "text1": "Now astronauts have lined up in a column, help astronauts distribute to ships. Use your flex-wrap, flex-direction, align-items properties.",
+        "text2": "",
+        "list": []
+      },
+      "level-20": {
+        "text1": "They stood beautifully of course, but not on their ships... Distribute them so that each is on their ship.",
+        "text2": "",
+        "list": []
+      },
+      "level-21": {
+        "text1": "Let's get to know a new property that is called align-content. Align-content is similar to align-items, but there are differences. Align-items is responsible for how the elements as a whole will be aligned in the container, align-content is responsible for the distance between rows of elements, for how multiple rows should be separated from each other. Align-content only works when there is flex-wrap. That is, when rows appear.",
+        "text2": "",
+        "list": [
+          "flex-start - rows are set at the top of the container",
+          "flex-end - rows are set at the bottom of the container",
+          "center - rows are set in the center",
+          "space-between - there is a space between rows. The first and last rows are pushed towards the top and bottom.",
+          "space-around - there is space around the rows.",
+          "space-evenly - the spacing of elements is set evenly.",
+          "stretch - rows are evenly stretched to fill the free space"
+        ]
+      },
+      "level-22": {
+        "text1": "Use align-content to align the row to the bottom of the container",
+        "text2": "",
+        "list": []
+      },
+      "level-23": {
+        "text1": "Help the astronauts reach the ships using align-content and justify-content.",
+        "text2": "",
+        "list": []
+      },
+      "level-24": {
+        "text1": "Now they are standing in a column. Use align-content and flex-direction to each stand on their own ship.",
+        "text2": "",
+        "list": []
+      },
+      "level-25": {
+        "text1": "Congratulations, news has come that you can go into space and make expeditions to the planets, but before that you need to work, there is only a little left, this is needed so that you consolidate your skills and be able to work in the future.",
+        "text2": "Use the necessary properties to make the astronauts stand on their ships.",
+        "list": ["flex-wrap", "align-content", "flex-direction"]
+      },
+      "level-26": {
+        "text1": "This is your final task. Show the master class what you have learned!",
+        "text2": "Help the astronauts reach the ships and you can go to the hangar to meet your own ship.",
+        "list": [
+          "justify-content",
+          "flex-wrap",
+          "align-content",
+          "flex-direction"
+        ]
+      }
+    }
+  }
 }
