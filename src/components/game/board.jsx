@@ -6,7 +6,7 @@ import _ from "lodash";
 const Board = ({level}) => {
     const style = useSelector((state) => state.style.value);
     return (
-        <div className="board">
+        <div className="board panel">
             <div className="foreground" 
                 style={level.parentStyles ? 
                     (_.isEmpty(style) ? level.base : style) : null
@@ -28,7 +28,7 @@ const Board = ({level}) => {
                     </div>
                 ))}
             </div>
-            <div className="background"
+            <div className="background monitor"
                 style={level.parentStyles ? level.answer : null}
             >
                 {level.colors.map((color, index) => (

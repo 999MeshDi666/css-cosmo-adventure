@@ -45,14 +45,16 @@ const CodePanel = ({ levelsList, level }) => {
   }, [text]);
 
   return (
-    <div className={`input-wrapper ${animation ? "vibration" : ""}`}>
-      <p>current level: {curLvl}</p>
-      <textarea 
-        name="text" 
-        id="text" 
-        value={text} 
-        onChange={handleSetText} />
+    <div className="code-panel panel">
+      <div className="monitor">
+        <textarea 
+          name="text" 
+          id="text" 
+          value={text} 
+          onChange={handleSetText} />
+      </div>
       <button onClick={handleCheckStyles}>Check</button>
+      
     </div>
   );
 };

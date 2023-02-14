@@ -4,7 +4,7 @@ import levels from "../../json/levels.json";
 import CodePanel from "./codePanel";
 import Board from "./board";
 import Description from "./desc";
-
+import "./styles/game.css";
 
 
 const GamePage = () => {
@@ -13,9 +13,9 @@ const GamePage = () => {
   const levelsList = levels["levels"];
   const level = levelsList[`level-${curLvl}`];
   return (
-      <Container>
+      <Container fluid className="game-container">
         <Row>
-          <Col xs={12} lg={6} className="mt-5">
+          <Col xs={12} lg={6} className="">
             <Description levelsList={levelsList} />
             <CodePanel 
               levelsList={levelsList} 

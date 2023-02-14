@@ -40,8 +40,8 @@ const Description = ({ levelsList }) => {
  
 
   return (
-    <div>
-      <div>
+    <div className="desc-panel panel">
+      <div className="level-selector">
         <select onChange={handleLevelOption} value={curLvl}>
           {Object.keys(levelsList).map((level) => (
             <option
@@ -54,13 +54,13 @@ const Description = ({ levelsList }) => {
           ))}
         </select>
       </div>
-      <div className="desc">
-        <p
+      <div className="desc monitor">
+        <p className="text-content"
           dangerouslySetInnerHTML={{
             __html: replaceKeyWordToTag(descLevels.text1, descriptions),
           }}
         ></p>
-        <ul>
+        <ul className="text-content">
           {descLevels.list.map((elem, index) => (
             <li
               key={index}
@@ -69,7 +69,7 @@ const Description = ({ levelsList }) => {
             ></li>
           ))}
         </ul>
-        <p
+        <p className="text-content"
           dangerouslySetInnerHTML={{
             __html: replaceKeyWordToTag(descLevels.text2, descriptions),
           }}
