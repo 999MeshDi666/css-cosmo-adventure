@@ -13,9 +13,9 @@ const Description = ({ levelsList }) => {
   const [completedLevel, setCompletedLevels] = useState(
     completedLevels ? completedLevels : ["level-1"]
   );
-
-  const descLevels = desc.ru.levels[`level-${curLvl}`];
-  const descriptions = desc.ru.descriptions;
+  
+  const descLevels = desc.en.levels[`level-${curLvl}`];
+  const descriptions = desc.en.descriptions;
   const handleLevelOption = (e) => {
     dispatch(setLevel(Number(e.target.value)));
   };
@@ -37,20 +37,21 @@ const Description = ({ levelsList }) => {
     );
   });
 
- 
 
   return (
     <div className="desc-panel panel">
       <div className="level-selector">
-        <select onChange={handleLevelOption} value={curLvl}>
+        <select onChange={handleLevelOption} value={curLvl} className="selector">
           {Object.keys(levelsList).map((level) => (
+          
             <option
               value={level.substring(6)}
               key={level}
-              disabled={completedLevel.includes(level) ? false : true}
+              disabled={!completedLevel.includes(level)}
             >
               {level}
             </option>
+            
           ))}
         </select>
       </div>
