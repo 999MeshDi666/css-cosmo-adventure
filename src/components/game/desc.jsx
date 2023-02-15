@@ -43,7 +43,6 @@ const Description = ({ levelsList }) => {
       <div className="level-selector">
         <select onChange={handleLevelOption} value={curLvl} className="selector">
           {Object.keys(levelsList).map((level) => (
-          
             <option
               value={level.substring(6)}
               key={level}
