@@ -1,17 +1,14 @@
-.game-container {
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-}
+/* .game-container {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+} */
 .panel {
   background: #cfcfcf;
   border: 10px solid #ababab;
   box-shadow: 4px 4px 4px #2c2c2c;
   border-radius: 40px;
-  padding: 12px 40px 26px;
-
-  width: 90%;
-  min-width: 300px;
-  min-height: 300px;
+  padding: 12px 40px 20px;
+  width: 85%;
   margin: 0 auto;
 }
 .monitor {
@@ -21,7 +18,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
-  height: 32vh;
+  height: 30vh;
 }
 
 .text-content {
@@ -46,7 +43,7 @@
   margin-bottom: 16px;
 }
 .code-panel {
-  padding: 40px 40px 12px;
+  padding: 40px 40px 8px;
 }
 .input-wrapper {
   width: 300px;
@@ -60,6 +57,8 @@
   top: 0;
   height: 100%;
   padding: 0;
+  min-width: 300px;
+  min-height: 300px;
 }
 .foreground {
   z-index: 20;
@@ -108,10 +107,11 @@
   color: #fff;
   text-transform: uppercase;
   font-size: 12px;
+  letter-spacing: 0.07em;
   padding: 5px 32px;
   border: 3px solid #ababab;
   
-  background-image: url('data:image/svg+xml;utf8, <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M7.3943 8.585C6.93188 9.38594 6.70067 9.78641 6.39715 9.91775C6.14374 10.0274 5.85626 10.0274 5.60285 9.91775C5.29933 9.78641 5.06812 9.38594 4.6057 8.585L1.33212 2.915C0.8697 2.11406 0.638489 1.71359 0.6765 1.38506C0.708237 1.11077 0.851974 0.861813 1.07365 0.697183C1.33916 0.5 1.80158 0.5 2.72642 0.5L9.27358 0.5C10.1984 0.5 10.6608 0.5 10.9264 0.697183C11.148 0.861813 11.2918 1.11077 11.3235 1.38506C11.3615 1.71359 11.1303 2.11406 10.6679 2.915L7.3943 8.585Z" fill="white"/></svg>');
+  background-image: url('../../../images/arrow.svg');
   background-repeat: no-repeat;
   background-position: 92% 46%;
 
@@ -136,6 +136,51 @@
 }
 .monitor::-webkit-scrollbar-thumb{
   border-radius: 0px 10px 10px 0px
+}
+.panel-btns{
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px 0 0;
+}
+
+.panel-btn{
+  border-width: 1px 3px 2px 1px;
+  border-style: solid;
+  border-color: #1C1C1C;
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Sniglet', sans-serif;
+  font-size: 12px;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.panel-btn:active{
+  box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.4);
+  border-width: 1px 2px 1px 1px;
+}
+
+.option-btn, 
+.answer-btn{
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: center center;
+  width: 50px;
+  height: 46px;
+}
+.check-btn{
+  background: #CF5D5D;
+  width: 126px;
+  height: 46px;
+}
+.option-btn{
+  background-color: #6889C9;
+  background-image: url('../../../images/gear.svg');
+  margin: 0 15px;
+}
+.answer-btn{
+  background-color: #DDCF50;
+  background-image: url('../../../images/lightbulb.svg');
 }
 
 .vibration {

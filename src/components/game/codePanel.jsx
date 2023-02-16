@@ -53,7 +53,12 @@ const CodePanel = ({ levelsList, level }) => {
           value={text} 
           onChange={handleSetText} />
       </div>
-      <button onClick={handleCheckStyles}>Check</button>
+      <div className="panel-btns">
+        <button className="panel-btn answer-btn"></button>
+        <button className="panel-btn option-btn"></button>
+        <button onClick={handleCheckStyles} className="panel-btn check-btn">Проверить</button>
+        
+      </div>
       
     </div>
   );
