@@ -1,6 +1,6 @@
 {
     "levels":{
-        "level-1":{
+        "1":{
             "parentStyles": true,
             "colors": ["#f0e8f3"],
             "base": {
@@ -10,7 +10,7 @@
                 "justifyContent": "center"
             }
         },
-        "level-2":{
+        "2":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
@@ -20,7 +20,7 @@
                 "justifyContent": "flex-end"
             }
         },
-        "level-3":{
+        "3":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
@@ -30,7 +30,7 @@
                 "justifyContent": "space-between"
             }
         },
-        "level-4":{
+        "4":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
@@ -40,7 +40,7 @@
                 "justifyContent": "space-around"
             }
         },
-        "level-5":{
+        "5":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2"],
             "base": {
@@ -50,7 +50,7 @@
                 "justifyContent": "space-evenly"
             }
         },
-        "level-6":{
+        "6":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -61,7 +61,7 @@
                 "alignItems": "center"
             }
         },
-        "level-7":{
+        "7":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -71,7 +71,7 @@
                 "alignItems": "flex-end"
             }
         },
-        "level-8":{
+        "8":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -82,7 +82,7 @@
                 "alignItems": "center"
             }
         },
-        "level-9":{
+        "9":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -94,7 +94,7 @@
                 "alignItems": "flex-end"
             }
         },
-        "level-10":{
+        "10":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -105,7 +105,7 @@
                 "justifyContent": "flex-end"
             }
         },
-        "level-11":{
+        "11":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -116,7 +116,7 @@
                 "alignItems": "flex-end"
             }
         },
-        "level-12":{
+        "12":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -128,7 +128,7 @@
                 "alignItems": "center"
             }
         },
-        "level-13":{
+        "13":{
             "parentStyles": true,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
@@ -142,7 +142,7 @@
                 "alignItems": "flex-end"
             }
         },
-        "level-14":{
+        "14":{
             "parentStyles": false,
             "childIndex": 0,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -153,7 +153,7 @@
                 "order": "2"  
             }
         },
-        "level-15":{
+        "15":{
             "parentStyles": false,
             "childIndex": 1,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -164,7 +164,7 @@
                 "alignSelf": "center"  
             }
         },
-        "level-16":{
+        "16":{
             "parentStyles": false,
             "childIndex": 2,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -176,7 +176,7 @@
                 "alignSelf": "flex-end"  
             }
         },
-        "level-17":{
+        "17":{
             "parentStyles": false,
             "childIndex": 1,
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
@@ -188,7 +188,7 @@
                 "alignSelf": "flex-end"  
             }
         },
-        "level-18":{
+        "18":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -199,7 +199,7 @@
                 "alignItems": "center"
             }
         },
-        "level-19":{
+        "19":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -213,7 +213,7 @@
                 "alignItems": "flex-end"
             }
         },
-        "level-20":{
+        "20":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -226,7 +226,7 @@
                 "alignItems": "flex-end"
             }
         },
-        "level-21":{
+        "21":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -236,7 +236,7 @@
                 "alignContent": "center"
             }
         },
-        "level-22":{
+        "22":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -246,7 +246,7 @@
                 "alignContent": "flex-end"
             }
         },
-        "level-23":{
+        "23":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -259,7 +259,7 @@
                 "justifyContent": "center"
             }
         },
-        "level-24":{
+        "24":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -272,7 +272,7 @@
                 "flexDirection": "column-reverse"
             }
         },
-        "level-25":{
+        "25":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {
@@ -285,7 +285,7 @@
                 "flexWrap": "wrap-reverse"
             }
         },
-        "level-26":{
+        "26":{
             "parentStyles": true,
             "colors": ["#f0e8f3","#c9add2","#8fa5c3","#86d882","#d2d882","#d8b082","#82d5d8","#d882d5"],
             "base": {

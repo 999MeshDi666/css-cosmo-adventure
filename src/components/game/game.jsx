@@ -11,7 +11,8 @@ const GamePage = () => {
   
   const curLvl = useSelector((state)=> state.level.value);
   const levelsList = levels["levels"];
-  const level = levelsList[`level-${curLvl}`];
+  const level = levelsList[curLvl];
+  
   return (
       <Container fluid className="game-container">
         <Row>

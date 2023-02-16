@@ -13,7 +13,7 @@ const Description = ({ levelsList }) => {
   const [completedLevel, setCompletedLevels] = useState(
     completedLevels ? completedLevels : ["level-1"]
   );
-  
+
   const descLevels = desc.en.levels[`level-${curLvl}`];
   const descriptions = desc.en.descriptions;
   const handleLevelOption = (e) => {
@@ -37,25 +37,28 @@ const Description = ({ levelsList }) => {
     );
   });
 
-
   return (
     <div className="desc-panel panel">
       <div className="level-selector">
-        <select onChange={handleLevelOption} value={curLvl} className="selector">
+        <select
+          onChange={handleLevelOption}
+          value={curLvl}
+          className="selector"
+        >
           {Object.keys(levelsList).map((level) => (
             <option
-              value={level.substring(6)}
+              value={level}
               key={level}
-              disabled={!completedLevel.includes(level)}
+              disabled={!completedLevel.includes(`level-${level}`)}
             >
-              {level}
+              уровень-{level}
             </option>
-            
           ))}
         </select>
       </div>
       <div className="desc monitor">
-        <p className="text-content"
+        <p
+          className="text-content"
           dangerouslySetInnerHTML={{
             __html: replaceKeyWordToTag(descLevels.text1, descriptions),
           }}
@@ -64,12 +67,14 @@ const Description = ({ levelsList }) => {
           {descLevels.list.map((elem, index) => (
             <li
               key={index}
-              dangerouslySetInnerHTML={{ 
-                __html: replaceKeyWordToTag(elem, descriptions) }}
+              dangerouslySetInnerHTML={{
+                __html: replaceKeyWordToTag(elem, descriptions),
+              }}
             ></li>
           ))}
         </ul>
-        <p className="text-content"
+        <p
+          className="text-content"
           dangerouslySetInnerHTML={{
             __html: replaceKeyWordToTag(descLevels.text2, descriptions),
           }}
