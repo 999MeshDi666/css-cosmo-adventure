@@ -14,8 +14,8 @@ const Description = ({ levelsList }) => {
     completedLevels ? completedLevels : ["level-1"]
   );
 
-  const descLevels = desc.kz.levels[`level-${curLvl}`];
-  const descriptions = desc.kz.descriptions;
+  const descLevels = desc.ru.levels[`level-${curLvl}`];
+  const descriptions = desc.ru.descriptions;
   const handleLevelOption = (e) => {
     dispatch(setLevel(Number(e.target.value)));
   };
