@@ -8,7 +8,7 @@
   box-shadow: 4px 4px 4px #2c2c2c;
   border-radius: 40px;
   padding: 12px 40px 20px;
-  width: 85%;
+  width: 88%;
   margin: 0 auto;
 }
 .monitor {
@@ -45,12 +45,31 @@
 .code-panel {
   padding: 40px 40px 8px;
 }
-.input-wrapper {
-  width: 300px;
-  height: 250px;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: rgb(54, 54, 54);
+.code-panel-monitor{
+  display: flex;
+}
+.line-numbers{
+  font-size: 10px;
+  width: 20px;
+  text-align: center;
+  line-height: 175%;
+  margin-right: 10px;
+}
+.css-text{
+  white-space: pre;
+}
+.textarea-answer{
+  resize: none;
+  height: 72px;
+  width: 350px;
+  outline: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin-left: 10px;
+  font-size: 12px;
+}
+.textarea-answer::placeholder{
+  font-size: 10px;
 }
 .board {
   position: relative;

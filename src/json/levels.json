@@ -145,6 +145,7 @@
         "14":{
             "parentStyles": false,
             "childIndex": 0,
+            "childName":"white",
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "order": "1"
@@ -156,6 +157,7 @@
         "15":{
             "parentStyles": false,
             "childIndex": 1,
+            "childName":"pink",
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "alignSelf": "flex-start"
@@ -167,6 +169,7 @@
         "16":{
             "parentStyles": false,
             "childIndex": 2,
+            "childName":"blue",
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "alignSelf": "flex-start"
@@ -179,6 +182,7 @@
         "17":{
             "parentStyles": false,
             "childIndex": 1,
+            "childName":"pink",
             "colors": ["#f0e8f3", "#c9add2","#8fa5c3"],
             "base": {
                 "alignSelf": "flex-start"

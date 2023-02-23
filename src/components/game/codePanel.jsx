@@ -12,7 +12,7 @@ const CodePanel = ({ levelsList, level }) => {
   const text = useSelector((state) => state.text.value);
   const style = useSelector((state) => state.style.value);
   const dispatch = useDispatch();
-
+  
   const [animation, setAnimation] = useState(false);
 
   const handleSetText = (e) => {
@@ -30,8 +30,6 @@ const CodePanel = ({ levelsList, level }) => {
       }
       console.log("Правильно");
     } else {
-      setAnimation((prevState) => !prevState);
-      setTimeout(() => setAnimation((prevState) => !prevState), 1000);
       console.log("Неправильно");
     }
 
@@ -46,12 +44,26 @@ const CodePanel = ({ levelsList, level }) => {
 
   return (
     <div className="code-panel panel">
-      <div className="monitor">
-        <textarea 
-          name="text" 
-          id="text" 
-          value={text} 
-          onChange={handleSetText} />
+      <div className="monitor code-panel-monitor">
+        <p className="line-numbers"> 1 2 3 4 5 6 7 8 9 10 11 12</p>
+        <div className="css-content">
+          <p className="css-text text-content">
+            {level.parentStyles? '' : <>.board &#123; <br/> display: flex; <br/>&#125; </>}   
+          </p>
+          <p className="css-text text-content">
+            {level.parentStyles? <>.board &#123; <br/> display: flex; </> : <>.{level.childName} &#123;</>}
+          </p>
+          <textarea 
+            className="textarea-answer"
+            name="text" 
+            id="text" 
+            value={text} 
+            placeholder="напишите ответ здесь..."
+            onChange={handleSetText} 
+          />
+          <p className="text-content">&#125;</p>
+        </div>
+      
       </div>
       <div className="panel-btns">
         <button className="panel-btn answer-btn"></button>
