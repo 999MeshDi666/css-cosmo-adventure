@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useSelector} from "react-redux";
-import ModalOptions from "./modal";
+import ModalSettings from "./modal";
 import levels from "../../json/levels.json";
 import CodePanel from "./codePanel";
 import Board from "./board";
@@ -28,7 +28,7 @@ const GamePage = () => {
             <Board level={level}/>
           </Col>
         </Row>
-        <ModalOptions/>
+        <ModalSettings/>
       </Container>
   );
 };

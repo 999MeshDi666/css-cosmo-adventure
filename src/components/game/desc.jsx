@@ -7,15 +7,18 @@ import desc from "../../json/descriptions.json";
 
 const Description = ({ levelsList }) => {
   const curLvl = useSelector((state) => state.level.value);
+  const lang = useSelector((state)=> state.lang.value);
   const dispatch = useDispatch();
 
   const completedLevels = JSON.parse(localStorage.getItem("completedLevels"));
   const [completedLevel, setCompletedLevels] = useState(
     completedLevels ? completedLevels : ["level-1"]
   );
-
-  const descLevels = desc.ru.levels[`level-${curLvl}`];
-  const descriptions = desc.ru.descriptions;
+    
+  const descLevels = desc[lang].levels[`level-${curLvl}`];
+  const descriptions = desc[lang].descriptions;
+ 
+  
   const handleLevelOption = (e) => {
     dispatch(setLevel(Number(e.target.value)));
   };
@@ -32,8 +35,8 @@ const Description = ({ levelsList }) => {
   }, [completedLevel]);
 
   useEffect(() => {
-    Array.from(document.querySelectorAll('[data-bs-toggle="popover"]')).forEach(
-      (popoverNode) => new Tooltip(popoverNode)
+    Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]')).forEach(
+      (tooltipNode) => new Tooltip(tooltipNode)
     );
   });
 
@@ -51,7 +54,7 @@ const Description = ({ levelsList }) => {
               key={level}
               disabled={!completedLevel.includes(`level-${level}`)}
             >
-              уровень-{level}
+              {desc[lang].others.level}-{level}
             </option>
           ))}
         </select>

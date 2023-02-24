@@ -91,7 +91,7 @@
       "level-13": {
         "text1": "Помоги космонавтам используя ранее пройденные тобой свойства. justify-content, align-items, flex-direction.",
         "text2": "",
-        "list": ["justify-content", "align-items", "flex-direction"]
+        "list": []
       },
       "level-14": {
         "text1": " Космонавты дошли до своих кораблей, но стоят не по порядку. Для того чтобы они встали как надо, используй свойство order.",
@@ -185,6 +185,14 @@
           "flex-direction"
         ]
       }
+    },
+    "others":{
+      "level": "Уровень",
+      "check": "Проверить",
+      "close": "Закрыть",
+      "placeholder": "напишите ответ здесь...",
+      "langSettings": "Настройка языка",
+      "diffSettings": "Настрокиа сложности"
     }
   },
   "kz": {
@@ -280,7 +288,7 @@
       "level-13": {
         "text1": "Бұрын өткен қасиеттерді қолдана отырып ғарышкерлерге көмектесіңіз . justify-content, align-items, flex-direction.",
         "text2": "",
-        "list": ["justify-content", "align-items", "flex-direction"]
+        "list": []
       },
       "level-14": {
         "text1": "Ғарышкерлер өз кемелеріне жетті, бірақ ретімен орналасқан жоқ. Олар дұрыс тұру үшін order қасиетін пайдаланыңыз.",
@@ -374,6 +382,14 @@
           "flex-direction"
         ]
       }
+    },
+    "others":{
+      "level": "Деңгей",
+      "check": "Тексеру",
+      "close": "Жабу",
+      "placeholder": "жауапты мына жерге жазыңыз...",
+      "langSettings": "Тілді таңдау",
+      "diffSettings": "Қиындық параметрлері"
     }
   },
   "en": {
@@ -468,7 +484,7 @@
       "level-13": {
         "text1": "Help the astronauts using the previously learned properties. justify-content, align-items, flex-direction.",
         "text2": "",
-        "list": ["justify-content", "align-items", "flex-direction"]
+        "list": []
       },
       "level-14": {
         "text1": "The astronauts have reached their ships, but they are not standing in order. To have them stand properly, use the order property.",
@@ -562,6 +578,14 @@
           "flex-direction"
         ]
       }
+    },
+    "others":{
+      "level": "Level",
+      "check": "Check",
+      "close": "Close",
+      "placeholder": "write the answer here...",
+      "langSettings": "Language Settings",
+      "diffSettings": "Difficulty Settings"
     }
   }
 }

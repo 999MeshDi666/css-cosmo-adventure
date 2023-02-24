@@ -1,8 +1,10 @@
-import Modal from "react-bootstrap/Modal";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { handleShow } from "../../store/modalSlice";
-
-const ModalOptions = () => {
+import { setLang } from "../../store/langSlice";
+import Modal from "react-bootstrap/Modal";
+import desc from "../../json/descriptions.json";
+const ModalSettings = () => {
 
   const difficulties =[
     {
@@ -22,11 +24,20 @@ const ModalOptions = () => {
     }
   ]
   const show = useSelector((state) => state.modal.value);
+  const lang = useSelector((state)=> state.lang.value);
   const dispatch = useDispatch();
 
   const handleShowModal = () => {
     dispatch(handleShow());
   };
+
+  const handleSelectLang = (e) =>{
+    dispatch(setLang(e.target.value))
+  }
+  useEffect(()=>{
+    localStorage.setItem("currentLang", lang);
+  },[lang])
+  
   return (
     <>
       <Modal
@@ -38,15 +49,19 @@ const ModalOptions = () => {
       >
         <Modal.Body className="option-body">
           <div className="option-selector">
-            <p className="option-subtitle">Настройка языка</p>
-            <select className="lang-selector selector">
+            <p className="option-subtitle">{desc[lang].others.langSettings}:</p>
+            <select 
+              className="lang-selector selector"
+              onChange={handleSelectLang}
+              value={lang}
+            >
               <option value="en">English</option>
               <option value="ru">Русский</option>
               <option value="kz">Қазақша</option>
             </select>
           </div>
           <div className="option-difficulties">
-            <p className="option-subtitle">Настройка сложности</p>
+            <p className="option-subtitle">{desc[lang].others.diffSettings}:</p>
             <div className="difficulties">
                 {difficulties.map(elem=>(
                     <div className="d-flex" key={elem.value}>
@@ -60,13 +75,12 @@ const ModalOptions = () => {
                         <input type="radio" name="difficulties" id={elem.value} className="difficulties-radio"/>
                     </div>
                 ))}
-               
             </div>
           </div>
         </Modal.Body>
         <Modal.Footer className="option-footer">
             <button className="panel-btn close-btn" onClick={handleShowModal}>
-                Закрыть
+              {desc[lang].others.close}
             </button>
         </Modal.Footer>
        
@@ -75,4 +89,4 @@ const ModalOptions = () => {
   );
 };
 
-export default ModalOptions;
+export default ModalSettings;

@@ -5,6 +5,7 @@ import { setText } from "../../store/textSlice";
 import { setStyle } from "../../store/styleSlice";
 import { handleShow } from "../../store/modalSlice";
 import { css2obj } from "../../utils/converters";
+import desc from "../../json/descriptions.json";
 import _ from "lodash";
 
 const CodePanel = ({ levelsList, level }) => {
@@ -12,10 +13,9 @@ const CodePanel = ({ levelsList, level }) => {
   const curLvl = useSelector((state) => state.level.value);
   const text = useSelector((state) => state.text.value);
   const style = useSelector((state) => state.style.value);
-  const show = useSelector((state)=> state.modal.value);
+  const lang = useSelector((state) => state.lang.value);
   const dispatch = useDispatch();
-
-  const [animation, setAnimation] = useState(false);
+  
 
   const handleSetText = (e) => {
     dispatch(setText(e.target.value));
@@ -61,17 +61,16 @@ const CodePanel = ({ levelsList, level }) => {
             name="text" 
             id="text" 
             value={text} 
-            placeholder="напишите ответ здесь..."
+            placeholder= {desc[lang].others.placeholder}
             onChange={handleSetText} 
           />
           <p className="text-content">&#125;</p>
         </div>
-      
       </div>
       <div className="panel-btns">
         <button className="panel-btn answer-btn"></button>
         <button className="panel-btn option-btn" onClick={handleShowModal}></button>
-        <button className="panel-btn check-btn" onClick={handleCheckStyles} >Проверить</button>
+        <button className="panel-btn check-btn" onClick={handleCheckStyles}>{desc[lang].others.check}</button>
       </div>
       
     </div>

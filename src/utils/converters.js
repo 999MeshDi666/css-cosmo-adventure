@@ -17,7 +17,7 @@ export const replaceKeyWordToTag = (text, desc) => {
     const toolTip = textList.map((word) => {
       const regEx = /[|.|,]/;
       const keyWord = word.replace(regEx, "");
-      const tag = `<span class="key-words" data-bs-toggle="popover" data-bs-placement="top" title="${desc[keyWord]}"> ${keyWord}</span>`;
+      const tag = `<span class="key-words" data-bs-toggle="tooltip" data-bs-placement="top" title="${desc[keyWord]}"> ${keyWord}</span>`;
 
       const elem = keyWords.includes(keyWord)
         ? word.replace(keyWord, tag)
