@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setLevel } from "../../store/levelSlice";
+import { setLevel } from "../../store/slices/levelSlice";
 import { Tooltip } from "bootstrap/dist/js/bootstrap.esm.min.js";
 import { replaceKeyWordToTag } from "../../utils/converters";
 import desc from "../../json/descriptions.json";

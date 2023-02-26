@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { handleShow } from "../../store/modalSlice";
-import { setLang } from "../../store/langSlice";
+import { handleShow } from "../../store/slices/modalSlice";
+import { setLang } from "../../store/slices/langSlice";
 import Modal from "react-bootstrap/Modal";
 import desc from "../../json/descriptions.json";
 const ModalSettings = () => {

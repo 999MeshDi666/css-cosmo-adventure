@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "../../store/levelSlice";
-import { setText } from "../../store/textSlice";
-import { setStyle } from "../../store/styleSlice";
-import { handleShow } from "../../store/modalSlice";
+import { increment } from "../../store/slices/levelSlice";
+import { setText } from "../../store/slices/textSlice";
+import { setStyle } from "../../store/slices/styleSlice";
+import { handleShow } from "../../store/slices/modalSlice";
 import { css2obj } from "../../utils/converters";
 import desc from "../../json/descriptions.json";
 import _ from "lodash";
