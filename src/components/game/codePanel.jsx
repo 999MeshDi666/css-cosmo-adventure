@@ -4,7 +4,7 @@ import { increment } from "../../store/slices/levelSlice";
 import { setText } from "../../store/slices/textSlice";
 import { setStyle } from "../../store/slices/styleSlice";
 import { handleShow } from "../../store/slices/modalSlice";
-import { css2obj } from "../../utils/converters";
+import { css2obj, obj2css } from "../../utils/converters";
 import desc from "../../json/descriptions.json";
 import _ from "lodash";
 
@@ -40,6 +40,9 @@ const CodePanel = ({ levelsList, level }) => {
     dispatch(setStyle({}));
     dispatch(setText(""));
   };
+  const handleShowAnswer = () =>{
+    dispatch(setText(obj2css(level.answer)))
+  }
 
   useEffect(() => {
     const reactInlineCSS = css2obj`${text}`;
@@ -68,7 +71,7 @@ const CodePanel = ({ levelsList, level }) => {
         </div>
       </div>
       <div className="panel-btns">
-        <button className="panel-btn answer-btn"></button>
+        <button className="panel-btn answer-btn" onClick={handleShowAnswer}></button>
         <button className="panel-btn option-btn" onClick={handleShowModal}></button>
         <button className="panel-btn check-btn" onClick={handleCheckStyles}>{desc[lang].others.check}</button>
       </div>
