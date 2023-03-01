@@ -5,7 +5,7 @@ const currentLevel = Number(localStorage.getItem("currentLevel"));
 export const levelSlice = createSlice({
   name: 'level',
   initialState: {
-    value: currentLevel ? currentLevel : 1,
+    value: currentLevel || 1,
   },
   reducers: {
     increment: (state) => {

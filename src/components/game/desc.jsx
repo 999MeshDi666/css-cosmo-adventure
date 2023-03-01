@@ -8,12 +8,11 @@ import desc from "../../json/descriptions.json";
 const Description = ({ levelsList }) => {
   const curLvl = useSelector((state) => state.level.value);
   const lang = useSelector((state)=> state.lang.value);
+  const curDifficulty = useSelector((state)=> state.difficulty.curDifficulty);
   const dispatch = useDispatch();
 
   const completedLevels = JSON.parse(localStorage.getItem("completedLevels"));
-  const [completedLevel, setCompletedLevels] = useState(
-    completedLevels ? completedLevels : ["level-1"]
-  );
+  const [completedLevel, setCompletedLevels] = useState(completedLevels || ["level-1"]);
     
   const descLevels = desc[lang].levels[`level-${curLvl}`];
   const descriptions = desc[lang].descriptions;
@@ -62,26 +61,20 @@ const Description = ({ levelsList }) => {
       <div className="desc monitor">
         <p
           className="text-content"
-          dangerouslySetInnerHTML={{
-            __html: replaceKeyWordToTag(descLevels.text1, descriptions),
-          }}
-        ></p>
+          dangerouslySetInnerHTML={{__html: curDifficulty === 'hard'? descLevels.text1: 
+          replaceKeyWordToTag(descLevels.text1, descriptions)}}/>
         <ul className="text-content">
-          {descLevels.list.map((elem, index) => (
-            <li
-              key={index}
-              dangerouslySetInnerHTML={{
-                __html: replaceKeyWordToTag(elem, descriptions),
-              }}
-            ></li>
-          ))}
+          {curDifficulty === 'easy'? 
+            descLevels.list.map((elem, index) => (
+              <li
+                key={index}
+                dangerouslySetInnerHTML={{__html: replaceKeyWordToTag(elem, descriptions)}}/>
+          )): null}
         </ul>
         <p
           className="text-content"
-          dangerouslySetInnerHTML={{
-            __html: replaceKeyWordToTag(descLevels.text2, descriptions),
-          }}
-        ></p>
+          dangerouslySetInnerHTML={{__html: curDifficulty === 'hard'? descLevels.text2: 
+          replaceKeyWordToTag(descLevels.text2, descriptions)}}/>
       </div>
     </div>
   );

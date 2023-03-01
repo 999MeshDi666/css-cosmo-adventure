@@ -14,6 +14,7 @@ const CodePanel = ({ levelsList, level }) => {
   const text = useSelector((state) => state.text.value);
   const style = useSelector((state) => state.style.value);
   const lang = useSelector((state) => state.lang.value);
+  const curDifficulty = useSelector((state)=> state.difficulty.curDifficulty);
   const dispatch = useDispatch();
   
 
@@ -71,7 +72,9 @@ const CodePanel = ({ levelsList, level }) => {
         </div>
       </div>
       <div className="panel-btns">
-        <button className="panel-btn answer-btn" onClick={handleShowAnswer}></button>
+        <button className="panel-btn answer-btn"  
+                disabled={curDifficulty ==='easy'? false:true} 
+                onClick={handleShowAnswer}></button>
         <button className="panel-btn option-btn" onClick={handleShowModal}></button>
         <button className="panel-btn check-btn" onClick={handleCheckStyles}>{desc[lang].others.check}</button>
       </div>

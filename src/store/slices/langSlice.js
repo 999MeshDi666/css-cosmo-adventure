@@ -5,7 +5,7 @@ const currentLang = localStorage.getItem("currentLang");
 export const langSlice = createSlice({
   name: 'lang',
   initialState: {
-    value: currentLang  ? currentLang  : 'ru',
+    value: currentLang||'ru',
   },
   reducers: {
     setLang: (state, action) =>{

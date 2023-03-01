@@ -9,7 +9,8 @@ const ModalSettings = () => {
 
   const show = useSelector((state) => state.modal.value);
   const lang = useSelector((state)=> state.lang.value);
-  const difficulty = useSelector((state)=> state.difficulty.value)
+  const difficultyList = useSelector((state)=> state.difficulty.difficultyList);
+  const curDifficulty = useSelector((state)=> state.difficulty.curDifficulty);
   const dispatch = useDispatch();
 
   const handleShowModal = () => {
@@ -19,13 +20,18 @@ const ModalSettings = () => {
   const handleSelectLang = (e) =>{
     dispatch(setLang(e.target.value))
   }
+  const handleSetDifficulty = (value) =>{
+    dispatch(setDifficulty(value))
+  }
   useEffect(()=>{
     localStorage.setItem("currentLang", lang);
   },[lang])
   
-  const handleSetDifficulty = (val) =>{
-    dispatch(setDifficulty(val))
-  }
+  useEffect(() => {
+    localStorage.setItem("difficulty", JSON.stringify(difficultyList));
+    localStorage.setItem("currentDifficulty", curDifficulty);
+  }, [difficultyList]);
+  
   return (
     <>
       <Modal
@@ -51,7 +57,7 @@ const ModalSettings = () => {
           <div className="option-difficulties">
             <p className="option-subtitle">{desc[lang].others.diffSettings}:</p>
             <div className="difficulties">
-                {difficulty.map(elem=>(
+                {difficultyList.map(elem=>(
                     <div className="d-flex" key={elem.value}>
                         <div className="difficulties-toggler">
                             <label htmlFor={elem.value} 

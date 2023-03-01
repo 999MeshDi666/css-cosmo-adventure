@@ -177,10 +177,16 @@
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
-
-.panel-btn:not(.difficulties-label):active{
+.panel-btn:disabled{
+  background-color: #a8a588;
+}
+.panel-btn:not(.difficulties-label,.panel-btn:disabled):active{
   box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.4);
   border-width: 1px 2px 1px 1px;
+}
+.panel-btn:disabled{
+  cursor: not-allowed;
+  background-color: #a8a588;
 }
 
 .option-btn, 
@@ -205,6 +211,7 @@
   background-color: #DDCF50;
   background-image: url('../../../images/lightbulb.svg');
 }
+
 .close-btn{
   background: #CF5D5D;
   width: 98px;
@@ -246,9 +253,9 @@
   letter-spacing: 0.07em;
 }
 
-/* .difficulties-radio{
+.difficulties-radio{
   visibility: hidden;
-} */
+}
 .difficulties-label{
   font-size: 8px;
   text-align: center;
@@ -260,7 +267,7 @@
  
 }
 .label-toggle-in{
-  animation: toggle-in 1s forwards 1 ease-in;
+  animation: toggle-in 1s forwards 1 linear;
 }
 @keyframes toggle-in {
   0%{
@@ -271,7 +278,7 @@
   }
 }
 .label-toggle-out{
-  animation: toggle-out 1s forwards 1 ease-out;
+  animation: toggle-out 1s forwards 1 linear;
 }
 @keyframes toggle-out {
   0%{
