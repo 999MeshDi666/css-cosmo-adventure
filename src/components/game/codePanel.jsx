@@ -75,7 +75,7 @@ const CodePanel = ({ levelsList, level }) => {
         <button className="panel-btn answer-btn"  
                 disabled={curDifficulty ==='easy'? false:true} 
                 onClick={handleShowAnswer}></button>
-        <button className="panel-btn option-btn" onClick={handleShowModal}></button>
+        <button className="panel-btn settings-btn" onClick={handleShowModal}></button>
         <button className="panel-btn check-btn" onClick={handleCheckStyles}>{desc[lang].others.check}</button>
       </div>
       

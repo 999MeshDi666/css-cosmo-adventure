@@ -41,11 +41,16 @@ const Description = ({ levelsList }) => {
 
   return (
     <div className="desc-panel panel">
-      <div className="level-selector">
+      <div className="sn_btns-select">
+        <div className="sn-btns">
+            <a href="https://www.linkedin.com/in/madi-yegeubekov-060479248/" target="_blank" className="sn-btn panel-btn linkedIn"/>
+            <a href="https://t.me/Madi0404" target="_blank" className="panel-btn  sn-btn telegram"/>
+            <a href="https://github.com/999MeshDi666" target="_blank" className=" panel-btn sn-btn  git"/>
+        </div>
         <select
           onChange={handleLevelOption}
           value={curLvl}
-          className="selector"
+          className="select"
         >
           {Object.keys(levelsList).map((level) => (
             <option

@@ -30,10 +30,10 @@
   line-height: 25px;
   letter-spacing: 0.12em;
 }
-.level-selector {
+.sn_btns-select {
   display: flex;
   justify-content: end;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .desc {
   color: black;
@@ -41,6 +41,7 @@
 }
 .desc-panel {
   margin-bottom: 16px;
+  padding-bottom: 40px;
 }
 .code-panel {
   padding: 40px 40px 8px;
@@ -121,7 +122,9 @@
   align-items: center;
   justify-content: center;
 }
-.selector {
+
+
+.select {
   background: #505050;
   color: #fff;
   text-transform: uppercase;
@@ -140,21 +143,21 @@
   cursor: pointer;
   outline: none;
 }
-.lang-selector{
+.lang-select{
   font-size: 10px;
   padding: 8px 43px 4px;
 }
 .monitor::-webkit-scrollbar,
-.selector::-webkit-scrollbar {
+.select::-webkit-scrollbar {
   width: 14px;
 }
 .monitor::-webkit-scrollbar-track,
-.selector::-webkit-scrollbar-track {
+.select::-webkit-scrollbar-track {
   background: #5A5A5A;
   border-radius: 0px 10px 10px 0px;
 }
 .monitor::-webkit-scrollbar-thumb,
-.selector::-webkit-scrollbar-thumb  {
+.select::-webkit-scrollbar-thumb  {
   background-color: #666666;
 }
 .monitor::-webkit-scrollbar-thumb{
@@ -170,26 +173,40 @@
   border-style: solid;
   border-color: #1C1C1C;
   border-radius: 8px;
+
   color: #fff;
   font-family: 'Sniglet', sans-serif;
   font-size: 12px;
 
   letter-spacing: 0.07em;
   text-transform: uppercase;
+  user-select: none;
 }
-.panel-btn:disabled{
-  background-color: #a8a588;
-}
-.panel-btn:not(.difficulties-label,.panel-btn:disabled):active{
+.panel-btn:not(.difficulties-label,
+.panel-btn:disabled):active{
   box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.4);
   border-width: 1px 2px 1px 1px;
+}
+:is(.answer-btn, .label-easy, .linkedIn){
+  background-color: #DDCF50;
+} 
+
+:is(.settings-btn, .label-medium, .telegram){
+  background-color: #6889C9;
+}
+:is(.check-btn, .label-hard, 
+    .close-btn, .git){
+  background: #CF5D5D;
 }
 .panel-btn:disabled{
   cursor: not-allowed;
   background-color: #a8a588;
 }
-
-.option-btn, 
+.check-btn{
+  width: 126px;
+  height: 46px;
+}
+.settings-btn, 
 .answer-btn{
   background-repeat: no-repeat;
   background-size: 28px;
@@ -197,42 +214,60 @@
   width: 50px;
   height: 46px;
 }
-.check-btn{
-  background: #CF5D5D;
-  width: 126px;
-  height: 46px;
-}
-.option-btn{
-  background-color: #6889C9;
+.settings-btn{
   background-image: url('../../../images/gear.svg');
   margin: 0 15px;
 }
 .answer-btn{
-  background-color: #DDCF50;
   background-image: url('../../../images/lightbulb.svg');
 }
 
 .close-btn{
-  background: #CF5D5D;
   width: 98px;
   height: 38px;
   margin: 0;
+}
+.sn-btns{
+  display: flex;
+  align-items: center;
+  margin-right: 45px;
+}
+.sn-btn{
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border-radius: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.linkedIn{
+  background-image: url("../../../images/linkedin.svg");
+  background-size: 10px;
+}
+.telegram{
+  background-image: url("../../../images/telegram.svg");
+  margin: 0 25px;
+}
+.git{
+  background-image: url("../../../images/github.svg");
+  background-size: 14px;
+  background-position: 4px center;
 }
 .modal-dialog{
   margin: 0;
 }
 .modal-content,
-.option-body,
-.option-footer{
+.settings-body,
+.settings-footer{
   border: none;
   background-color: transparent;
   padding: 0;
  
 }
-.option-body{
+.settings-body{
   margin-bottom: 30px;
 }
-.option{
+.settings{
   width: 320px;
   height: 372px;
   padding: 44px 20px 20px;
@@ -243,16 +278,15 @@
   left: 0;
   margin: auto;
 }
-.option-selector{
+.settings-select{
   margin-bottom: 20px;
 }
-.option-subtitle{
+.settings-subtitle{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #000000;
   letter-spacing: 0.07em;
 }
-
 .difficulties-radio{
   visibility: hidden;
 }
@@ -264,7 +298,6 @@
   border-width: 1px 1px 3px 1px;
   transform: translateX(10px);
   cursor: pointer;
- 
 }
 .label-toggle-in{
   animation: toggle-in 1s forwards 1 linear;
@@ -297,15 +330,6 @@
   position: relative;
   top: -20px;
   z-index: -1;
-}
-.label-hard{
-  background-color: #CF5D5D;
-}
-.label-medium {
-  background-color: #6889C9;
-}
-.label-easy{
-  background-color: #DDCF50;
 }
 .vibration {
   animation: vibration 1s 1;

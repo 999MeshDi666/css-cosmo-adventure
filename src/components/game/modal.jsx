@@ -35,17 +35,17 @@ const ModalSettings = () => {
   return (
     <>
       <Modal
-        className="option panel"
+        className="settings panel"
         show={show}
         onHide={handleShowModal}
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Body className="option-body">
-          <div className="option-selector">
-            <p className="option-subtitle">{desc[lang].others.langSettings}:</p>
+        <Modal.Body className="settings-body">
+          <div className="settings-selector">
+            <p className="settings-subtitle">{desc[lang].others.langSettings}:</p>
             <select 
-              className="lang-selector selector"
+              className="lang-select select"
               onChange={handleSelectLang}
               value={lang}
             >
@@ -54,14 +54,14 @@ const ModalSettings = () => {
               <option value="kz">Қазақша</option>
             </select>
           </div>
-          <div className="option-difficulties">
-            <p className="option-subtitle">{desc[lang].others.diffSettings}:</p>
+          <div className="settings-difficulties">
+            <p className="settings-subtitle">{desc[lang].others.diffSettings}:</p>
             <div className="difficulties">
                 {difficultyList.map(elem=>(
                     <div className="d-flex" key={elem.value}>
                         <div className="difficulties-toggler">
                             <label htmlFor={elem.value} 
-                                className={`difficulties-label label-${elem.value} panel-btn 
+                                className={`difficulties-label panel-btn label-${elem.value}
                                           ${elem.isChecked ? 'label-toggle-in':'label-toggle-out' }`}>
                                 {elem.title}
                             </label>
@@ -79,7 +79,7 @@ const ModalSettings = () => {
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer className="option-footer">
+        <Modal.Footer className="settings-footer">
             <button className="panel-btn close-btn" onClick={handleShowModal}>
               {desc[lang].others.close}
             </button>
