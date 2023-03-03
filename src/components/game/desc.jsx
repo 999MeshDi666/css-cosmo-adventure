@@ -50,7 +50,7 @@ const Description = ({ levelsList }) => {
         <select
           onChange={handleLevelOption}
           value={curLvl}
-          className="select"
+          className="select level-select"
         >
           {Object.keys(levelsList).map((level) => (
             <option
@@ -68,7 +68,7 @@ const Description = ({ levelsList }) => {
           className="text-content"
           dangerouslySetInnerHTML={{__html: curDifficulty === 'hard'? descLevels.text1: 
           replaceKeyWordToTag(descLevels.text1, descriptions)}}/>
-        <ul className="text-content">
+        <ul className="text-content list-content">
           {curDifficulty === 'easy'? 
             descLevels.list.map((elem, index) => (
               <li

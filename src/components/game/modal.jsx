@@ -42,7 +42,7 @@ const ModalSettings = () => {
         keyboard={false}
       >
         <Modal.Body className="settings-body">
-          <div className="settings-selector">
+          <div className="settings-select">
             <p className="settings-subtitle">{desc[lang].others.langSettings}:</p>
             <select 
               className="lang-select select"
