@@ -16,8 +16,7 @@ const Description = ({ levelsList }) => {
     
   const descLevels = desc[lang].levels[`level-${curLvl}`];
   const descriptions = desc[lang].descriptions;
- 
-  
+
   const handleLevelOption = (e) => {
     dispatch(setLevel(Number(e.target.value)));
   };
@@ -63,7 +62,7 @@ const Description = ({ levelsList }) => {
           ))}
         </select>
       </div>
-      <div className="desc monitor">
+      <div className="desc-monitor monitor">
         <p
           className="text-content"
           dangerouslySetInnerHTML={{__html: curDifficulty === 'hard'? descLevels.text1: 

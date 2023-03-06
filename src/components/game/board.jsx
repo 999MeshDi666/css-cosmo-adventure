@@ -8,39 +8,26 @@ const Board = ({level}) => {
     return (
         <div className="board panel">
             <div className="foreground" 
-                style={level.parentStyles ? 
-                    (_.isEmpty(style) ? level.base : style) : null
-                }
-            >
+                style={level.parentStyles ? (_.isEmpty(style) ? level.base : style) : null}>
                 {level.colors.map((color, index) => (
                     <div
                         className="block"
                         id={`astronaut${index}`}
                         key={index}
-                        style={
-                        !level.parentStyles && 
-                            index === level.childIndex? 
-                                (_.isEmpty(style)? level.base : style) 
-                                : null
-                        }
-                    >
+                        style={!level.parentStyles && index === level.childIndex? 
+                                (_.isEmpty(style)? level.base : style) : null}>
                         <Astronaut color={color} />
                     </div>
                 ))}
             </div>
             <div className="background monitor"
-                style={level.parentStyles ? level.answer : null}
-            >
+                style={level.parentStyles ? level.answer : null}>
                 {level.colors.map((color, index) => (
                     <div
                         className="block"
                         id={`astronaut${index}`}
                         key={index}
-                        style={
-                        !level.parentStyles && 
-                        index === level.childIndex? level.answer: null
-                        }
-                    >
+                        style={!level.parentStyles && index === level.childIndex? level.answer: null}>
                         <Spaceship color={color} />
                     </div>
                 ))}

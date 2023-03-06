@@ -30,7 +30,7 @@ const ModalSettings = () => {
   useEffect(() => {
     localStorage.setItem("difficulty", JSON.stringify(difficultyList));
     localStorage.setItem("currentDifficulty", curDifficulty);
-  }, [difficultyList]);
+  }, [difficultyList,curDifficulty]);
   
   return (
     <>
