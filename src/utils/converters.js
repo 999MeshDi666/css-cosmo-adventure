@@ -1,5 +1,5 @@
 
-const camelCase = str => str.replace(/-(.)/g, (_,p) => p.toUpperCase());
+const camelCase = str => str.toLowerCase().replace(/-(.)/g, (_,p) => p.toUpperCase());
 export const css2obj = (strings, ...vals) => {
     const css = strings.reduce((acc, str, i) => acc + str + (vals[i] || ''), '')
     const regExp = /(?<=^|;)\s*([^:]+)\s*:\s*([^;]+)\s*/g, obj = {}
