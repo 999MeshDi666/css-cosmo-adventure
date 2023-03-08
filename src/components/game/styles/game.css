@@ -9,7 +9,6 @@
   width: 100%;
   margin: 0 auto;
 }
-
 .monitor {
   background: #505050;
   box-shadow: inset 0px 0px 32px -7px #000000;
@@ -53,7 +52,7 @@
 .board {
   position: relative;
   top: 0;
-  height: 100%;
+ 
   padding: 0;
   min-height: 300px;
 }
@@ -343,10 +342,33 @@
   color: rgb(31, 31, 31);
 }
 
+@media screen and (min-width: 768px) {
+  .panel{
+    width: 620px;
+  }
+  .desc-panel {
+    padding: 10px 30px 20px;
+  }
+  .code-panel {
+    padding: 30px 30px 8px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .panel{
+    width: 90%;
+    border-radius: 30px;
+  }
+  .board{
+    height: 94%;
+  }
+ 
+}
 @media screen and (min-width: 1200px) {
   .panel{
     border-radius: 40px;
-    width: 90%;
+  }
+  .board{
+    height: 100%;
   }
   .monitor {
     padding: 20px;
