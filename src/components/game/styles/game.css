@@ -9,6 +9,15 @@
   width: 100%;
   margin: 0 auto;
 }
+.desc-panel {
+  margin-bottom: 16px;
+  padding: 10px 10px 20px;
+}
+.code-panel {
+  margin-bottom: 40px;
+  padding: 20px 10px 8px;
+}
+
 .monitor {
   background: #505050;
   box-shadow: inset 0px 0px 32px -7px #000000;
@@ -17,37 +26,13 @@
   overflow-x: hidden;
   padding: 10px;
 }
-.text-content {
-  color: #fff;
-  text-align: justify;
-  font-size: 8px;
-  line-height: 20px;
-}
-.list-content{
-  margin: 5px 0 0 10px;
-  padding: 0;
-  text-align: left;
-}
-.list-content li{
-  margin: 8px 0;
-}
-.sn_btns-select {
-  display: flex;
-  justify-content: end;
-  margin: 0 20px 8px 0;
-}
 .desc-monitor {
   color: black;
   user-select: none;
-  height: 30vh;
+  height: 200px
 }
-.desc-panel {
-  margin-bottom: 16px;
-  padding: 10px 10px 20px;
-}
-.code-panel {
-  margin-bottom: 40px;
-  padding: 20px 10px 8px;
+.code-panel-monitor {
+  display: flex;
 }
 .board {
   position: relative;
@@ -77,32 +62,6 @@
   margin: auto;
   padding: 1em;
 }
-.code-panel-monitor {
-  display: flex;
-}
-.line-numbers {
-  font-size: 8px;
-  width: 20px;
-  text-align: center;
-  line-height: 175%;
-  margin-right: 6px;
-}
-.css-text {
-  white-space: pre;
-}
-.textarea-answer {
-  resize: none;
-  height: 72px;
-  width: 100%;
-  outline: none;
-  border-radius: 5px;
-  padding: 7px;
-  margin-left: 10px;
-  font-size: 8px;
-}
-.textarea-answer::placeholder {
-  font-size: 8px;
-}
 .astronaut {
   background-color: #d882d5;
 }
@@ -124,7 +83,48 @@
   align-items: center;
   justify-content: center;
 }
-
+.text-content {
+  color: #fff;
+  text-align: justify;
+  font-size: 8px;
+  line-height: 20px;
+}
+.css-text {
+  white-space: pre;
+}
+.textarea-answer {
+  resize: none;
+  height: 72px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin-left: 10px;
+  font-size: 8px;
+}
+.textarea-answer::placeholder {
+  font-size: 8px;
+}
+.list-content{
+  margin: 5px 0 0 10px;
+  padding: 0;
+  text-align: left;
+}
+.list-content li{
+  margin: 8px 0;
+}
+.line-numbers {
+  font-size: 8px;
+  width: 20px;
+  text-align: center;
+  line-height: 175%;
+  margin-right: 6px;
+}
+.sn_btns-select {
+  display: flex;
+  justify-content: end;
+  margin: 0 20px 8px 0;
+}
 .select {
   background: #505050;
   color: #fff;
