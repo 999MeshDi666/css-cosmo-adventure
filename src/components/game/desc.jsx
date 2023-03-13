@@ -7,13 +7,15 @@ import desc from "../../json/descriptions.json";
 
 const Description = ({ levelsList }) => {
   const curLvl = useSelector((state) => state.level.value);
-  const lang = useSelector((state)=> state.lang.value);
-  const curDifficulty = useSelector((state)=> state.difficulty.curDifficulty);
+  const lang = useSelector((state) => state.lang.value);
+  const curDifficulty = useSelector((state) => state.difficulty.curDifficulty);
   const dispatch = useDispatch();
 
   const completedLevels = JSON.parse(localStorage.getItem("completedLevels"));
-  const [completedLevel, setCompletedLevels] = useState(completedLevels || ["level-1"]);
-    
+  const [completedLevel, setCompletedLevels] = useState(
+    completedLevels || ["level-1"]
+  );
+
   const descLevels = desc[lang].levels[`level-${curLvl}`];
   const descriptions = desc[lang].descriptions;
 
@@ -42,9 +44,21 @@ const Description = ({ levelsList }) => {
     <div className="desc-panel panel">
       <div className="sn_btns-select">
         <div className="sn-btns">
-            <a href="https://www.linkedin.com/in/madi-yegeubekov-060479248/" target="_blank" className="sn-btn panel-btn linkedIn"/>
-            <a href="https://t.me/Madi0404" target="_blank" className="panel-btn  sn-btn telegram"/>
-            <a href="https://github.com/999MeshDi666" target="_blank" className=" panel-btn sn-btn  git"/>
+          <a
+            href="https://www.linkedin.com/in/madi-yegeubekov-060479248/"
+            target="_blank"
+            className="sn-btn panel-btn linkedIn"
+          />
+          <a
+            href="https://t.me/Madi0404"
+            target="_blank"
+            className="panel-btn  sn-btn telegram"
+          />
+          <a
+            href="https://github.com/999MeshDi666"
+            target="_blank"
+            className=" panel-btn sn-btn  git"
+          />
         </div>
         <select
           onChange={handleLevelOption}
@@ -65,20 +79,38 @@ const Description = ({ levelsList }) => {
       <div className="desc-monitor monitor">
         <p
           className="text-content"
-          dangerouslySetInnerHTML={{__html: curDifficulty === 'hard'? descLevels.text1: 
-          replaceKeyWordToTag(descLevels.text1, descriptions)}}/>
-        <ul className="text-content list-content">
-          {curDifficulty === 'easy'? 
-            descLevels.list.map((elem, index) => (
-              <li
-                key={index}
-                dangerouslySetInnerHTML={{__html: replaceKeyWordToTag(elem, descriptions)}}/>
-          )): null}
-        </ul>
+          dangerouslySetInnerHTML={{
+            __html:
+              curDifficulty !== "easy"
+                ? descLevels.text1
+                : replaceKeyWordToTag(descLevels.text1, descriptions),
+          }}
+        />
+
         <p
           className="text-content"
-          dangerouslySetInnerHTML={{__html: curDifficulty === 'hard'? descLevels.text2: 
-          replaceKeyWordToTag(descLevels.text2, descriptions)}}/>
+          dangerouslySetInnerHTML={{
+            __html:
+              curDifficulty !== "easy"
+                ? descLevels.text2
+                : replaceKeyWordToTag(descLevels.text2, descriptions),
+          }}
+        />
+        <ul className="text-content list-content">
+          {curDifficulty !== "hard"
+            ? descLevels.list.map((elem, index) => (
+                <li
+                  key={index}
+                  dangerouslySetInnerHTML={{
+                    __html:
+                    curDifficulty !== "easy"
+                      ? elem
+                      : replaceKeyWordToTag(elem, descriptions),
+                  }}
+                />
+              ))
+            : null}
+        </ul>
       </div>
     </div>
   );
