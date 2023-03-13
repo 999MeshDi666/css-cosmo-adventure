@@ -1,5 +1,5 @@
 .game-container {
-  padding: 2vh;
+  padding: 4vh 2vh;
 }
 .panel {
   background: #cfcfcf;
@@ -25,11 +25,11 @@
   overflow-y: auto;
   overflow-x: hidden;
   padding: 10px;
+  height: 200px
 }
 .desc-monitor {
   color: black;
   user-select: none;
-  height: 200px
 }
 .code-panel-monitor {
   display: flex;
@@ -114,11 +114,12 @@
   margin: 8px 0;
 }
 .line-numbers {
-  font-size: 8px;
+  font-size: 10px;
   width: 20px;
   text-align: center;
-  line-height: 175%;
+  line-height: 196%;
   margin-right: 6px;
+  
 }
 .sn_btns-select {
   display: flex;
@@ -427,8 +428,9 @@
     margin: 10px 0 0 15px;
   }
   .line-numbers {
-    font-size: 1.2vh;
+    font-size: 12px;
     margin-right: 10px;
+    line-height: 210%;
   }
   .textarea-answer {
     width: 350px;
