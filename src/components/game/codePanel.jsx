@@ -4,7 +4,8 @@ import { increment } from "../../store/slices/levelSlice";
 import { setText } from "../../store/slices/textSlice";
 import { setStyle } from "../../store/slices/styleSlice";
 import { handleShow } from "../../store/slices/modalSlice";
-import { css2obj, obj2css } from "../../utils/converters";
+import { obj2css } from "../../utils/converters";
+import toStyle from 'css-to-style';
 import desc from "../../json/descriptions.json";
 import _ from "lodash";
 
@@ -46,9 +47,11 @@ const CodePanel = ({ levelsList, level }) => {
   }
 
   useEffect(() => {
-    const reactInlineCSS = css2obj`${text}`;
+    const txt2css = text.toLowerCase();
+    const reactInlineCSS = toStyle(txt2css)
     dispatch(setStyle(reactInlineCSS));
   }, [text]);
+  console.log()
   return (
     <div className="code-panel panel">
       <div className="monitor code-panel-monitor">

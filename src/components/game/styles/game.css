@@ -424,6 +424,7 @@
     font-size: 12px;
     line-height: 25px;
   }
+  
   .list-content{
     margin: 10px 0 0 15px;
   }
@@ -434,6 +435,9 @@
   }
   .textarea-answer {
     width: 350px;
+    font-size: 10px;
+  }
+  .textarea-answer::placeholder {
     font-size: 10px;
   }
   .settings {
