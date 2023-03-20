@@ -4,7 +4,7 @@ import _ from "lodash";
 
 
 const Board = ({level}) => {
-    const style = useSelector((state) => state.style.value);
+    const style = useSelector((state) => state.styles.style);
     return (
         <div className="board panel">
             <div className="foreground" 

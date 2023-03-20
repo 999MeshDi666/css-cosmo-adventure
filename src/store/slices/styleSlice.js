@@ -1,16 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const styleSlice = createSlice({
-  name: 'style',
+  name: 'styles',
   initialState: {
-    value: {},
+    style: {},
+    text: ""
   },
   reducers: {
     setStyle: (state, action) => {
-      state.value = action.payload
+      state.style = action.payload
+    },
+    setText: (state, action) => {
+      state.text = action.payload
     },
   },
 })
 
-export const {setStyle} = styleSlice.actions;
+export const {setStyle, setText} = styleSlice.actions;
 export default styleSlice.reducer;

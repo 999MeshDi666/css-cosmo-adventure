@@ -6,11 +6,11 @@ export const modalSlice = createSlice({
       value: false,
     },
     reducers: {
-      handleShow: (state) => {
+      showModal: (state) => {
         state.value = !state.value 
       },
     },
   })
   
-  export const {handleShow} = modalSlice.actions;
+  export const {showModal} = modalSlice.actions;
   export default modalSlice.reducer;

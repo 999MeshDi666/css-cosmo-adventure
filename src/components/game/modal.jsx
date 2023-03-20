@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { handleShow } from "../../store/slices/modalSlice";
+import { showModal } from "../../store/slices/modalSlice";
 import { setLang } from "../../store/slices/langSlice";
 import { setDifficulty } from "../../store/slices/difficultySlice";
 import Modal from "react-bootstrap/Modal";
@@ -14,7 +14,7 @@ const ModalSettings = () => {
   const dispatch = useDispatch();
 
   const handleShowModal = () => {
-    dispatch(handleShow());
+    dispatch(showModal());
   };
 
   const handleSelectLang = (e) =>{
