@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import levels from "../../json/levels.json";
-import ModalSettings from "../modal/modal";
+import ModalSettings from "../modal-settings/ModalSettings";
 import CodePanel from "../code-panel/CodePanel";
 import Board from "../board/board";
 import Description from "../description/desc";
