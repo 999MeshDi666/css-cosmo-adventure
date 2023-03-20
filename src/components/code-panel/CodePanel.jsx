@@ -2,7 +2,7 @@ import desc from "../../json/descriptions.json";
 import CodePanelMonitor from "./code-panel-monitor/CodePanelMonitor";
 import CodePanelBtns from "./CodePanelBtns";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 
 const CodePanel = ({ levelsList, level }) => {
   const success = (text) =>

@@ -1,12 +1,13 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import ModalSettings from "./modal";
-import levels from "../../json/levels.json";
-import CodePanel from "../code-panel/CodePanel";
-import Board from "./board";
-import Description from "./desc";
-import "./styles/game.css";
 import { ToastContainer } from "react-toastify";
+import levels from "../../json/levels.json";
+import ModalSettings from "../modal/modal";
+import CodePanel from "../code-panel/CodePanel";
+import Board from "../board/board";
+import Description from "../description/desc";
+import "./styles/game.css";
+
 
 const GamePage = () => {
   const curLvl = useSelector((state) => state.level.value);
