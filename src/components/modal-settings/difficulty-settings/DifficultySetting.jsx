@@ -1,4 +1,4 @@
-import Toggles from "./Toggles";
+import Toggles from "./Toggles/Toggles";
 const DifficultySetting = ({desc, lang}) => {
   
   return (

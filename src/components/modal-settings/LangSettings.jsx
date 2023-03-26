@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { setLang } from "../../store/slices/langSlice";
+
 const LangSettings = ({ desc, lang }) => {
   const dispatch = useDispatch();
   const handleSelectLang = (e) => {
