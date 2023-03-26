@@ -1,3 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Sniglet:wght@400;800&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #425270;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+p,
+h1,h2,h3,h4,h5,h6
+{
+  padding: 0;
+  margin: 0;
+}
+
 .game-container {
   padding: 4vh 2vh;
 }
@@ -132,8 +155,7 @@
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border: 3px solid #ababab;
-
-  background-image: url("../../../images/arrow.svg");
+  background-image: url("../images/arrow.svg");
   background-repeat: no-repeat;
   background-position: 92% 46%;
 
@@ -218,11 +240,12 @@
   height: 38px;
 }
 .settings-btn {
-  background-image: url("../../../images/gear.svg");
+
+  background-image: url("../images/gear.svg");
   margin: 0 10px;
 }
 .answer-btn {
-  background-image: url("../../../images/lightbulb.svg");
+  background-image: url("../images/lightbulb.svg");
 }
 .close-btn {
   font-size: 12px;
@@ -244,17 +267,17 @@
   background-repeat: no-repeat;
 }
 .linkedIn {
-  background-image: url("../../../images/linkedin.svg");
+  background-image: url("../images/linkedin.svg");
   background-size: 10px;
 }
 .telegram {
-  background-image: url("../../../images/telegram.svg");
+  background-image: url("../images/telegram.svg");
   margin: 0 10px;
   background-size: 12px;
   background-position: 3px 5px;
 }
 .git {
-  background-image: url("../../../images/github.svg");
+  background-image: url("../images/github.svg");
   background-size: 14px;
   background-position: 4px center;
 }
@@ -445,3 +468,4 @@
   }
 
 }
+

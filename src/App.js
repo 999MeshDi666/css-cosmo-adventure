@@ -1,4 +1,8 @@
-import GamePage from "./components/game/Game";
+import GamePage from "./components/GamePage";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "react-toastify/dist/ReactToastify.css";
+import './assets/styles/index.css';
 
 function App() {
   return (
