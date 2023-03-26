@@ -5,7 +5,7 @@ import levels from "../../json/levels.json";
 import ModalSettings from "../modal-settings/ModalSettings";
 import CodePanel from "../code-panel/CodePanel";
 import Board from "../board/board";
-import Description from "../description/desc";
+import Description from "../description/Description";
 import "./styles/game.css";
 
 
