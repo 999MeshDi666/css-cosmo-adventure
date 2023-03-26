@@ -1,4 +1,4 @@
-import GamePage from "./components/game/game";
+import GamePage from "./components/game/Game";
 
 function App() {
   return (

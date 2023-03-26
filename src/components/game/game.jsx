@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import levels from "../../json/levels.json";
 import ModalSettings from "../modal-settings/ModalSettings";
 import CodePanel from "../code-panel/CodePanel";
-import Board from "../board/board";
+import Board from "../board/Board";
 import Description from "../description/Description";
 import "./styles/game.css";
 

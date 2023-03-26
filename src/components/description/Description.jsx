@@ -23,6 +23,7 @@ const Description = ({ levelsList }) => {
         <div className="sn-btns">
           {links.map((elem)=>(
             <a
+              key={elem.value}
               href={elem.href}
               rel="noreferrer" 
               target="_blank"

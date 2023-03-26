@@ -1,5 +1,5 @@
 import { useSelector} from "react-redux";
-import { Astronaut, Spaceship } from './characters';
+import { Astronaut, Spaceship } from './Characters';
 import _ from "lodash";
 
 
