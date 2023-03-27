@@ -1,13 +1,12 @@
-import desc from "../../json/descriptions.json";
 import CodePanelMonitor from "./code-panel-monitor/CodePanelMonitor";
 import CodePanelBtns from "./CodePanelBtns";
 import { toast } from "react-toastify";
 
 
-const CodePanel = ({ levelsList, level }) => {
+const CodePanel = ({ levelsList, level, description }) => {
   const success = (text) =>
-    toast(`🚀 ${text}`, {
-      theme: "light",
+    toast.success(`🚀 ${text}`, {
+      theme: "colored",
     });
 
   const error = () =>
@@ -16,11 +15,11 @@ const CodePanel = ({ levelsList, level }) => {
     });
   return (
     <div className="code-panel panel">
-      <CodePanelMonitor level={level} desc={desc} />
+      <CodePanelMonitor level={level} description={description} />
       <CodePanelBtns
         levelsList={levelsList}
         level={level}
-        desc={desc}
+        description={description}
         success={success}
         error={error}
       />

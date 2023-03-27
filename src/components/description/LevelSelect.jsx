@@ -2,10 +2,9 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setLevel } from "../../store/slices/levelSlice";
 
-const LevelSelect = ({ levelsList, desc }) => {
+const LevelSelect = ({ levelsList, description  }) => {
     
   const curLvl = useSelector((state) => state.level.value);
-  const lang = useSelector((state) => state.lang.value);
 
   const completedLevels = JSON.parse(localStorage.getItem("completedLevels"));
   const [completedLevel, setCompletedLevels] = useState(
@@ -40,7 +39,7 @@ const LevelSelect = ({ levelsList, desc }) => {
           key={level}
           disabled={!completedLevel.includes(`level-${level}`)}
         >
-          {desc[lang].others.level}-{level}
+          {description.others.level}-{level}
         </option>
       ))}
     </select>

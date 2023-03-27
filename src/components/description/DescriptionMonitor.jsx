@@ -3,14 +3,13 @@ import { useSelector } from "react-redux";
 import { Tooltip } from "bootstrap/dist/js/bootstrap.esm.min.js";
 import { replaceKeyWordToTag } from "../../utils/converters";
 
-const DescriptionMonitor = ({ desc }) => {
+const DescriptionMonitor = ({ description  }) => {
 
-  const lang = useSelector((state) => state.lang.value);
   const curLvl = useSelector((state) => state.level.value);
   const curDifficulty = useSelector((state) => state.difficulty.curDifficulty);
 
-  const descLevels = desc[lang].levels[`level-${curLvl}`];
-  const descriptions = desc[lang].descriptions;
+  const descLevels = description.levels[`level-${curLvl}`];
+  const descriptions = description.descriptions;
 
   useEffect(() => {
     Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]')).forEach(

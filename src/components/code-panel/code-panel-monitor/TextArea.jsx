@@ -5,8 +5,7 @@ import toStyle from "css-to-style";
 
 
 
-const TextArea = ({ desc }) => {
-  const lang = useSelector((state) => state.lang.value);
+const TextArea = ({ description}) => {
   const text = useSelector((state) => state.styles.text);
 
   const dispatch = useDispatch();
@@ -24,7 +23,7 @@ const TextArea = ({ desc }) => {
       name="text"
       id="text"
       value={text}
-      placeholder={desc[lang].others.placeholder}
+      placeholder={description.others.placeholder}
       onChange={handleSetText}
     />
   );

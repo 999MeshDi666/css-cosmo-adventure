@@ -5,11 +5,10 @@ import { showModal } from "../../store/slices/modalSlice";
 import { obj2css } from "../../utils/converters";
 import _ from "lodash";
 
-const CodePanelBtns = ({ levelsList, level, desc, success, error }) => {
+const CodePanelBtns = ({ levelsList, level, description, success, error }) => {
   
   const curLvl = useSelector((state) => state.level.value);
   const style = useSelector((state) => state.styles.style);
-  const lang = useSelector((state) => state.lang.value);
   const curDifficulty = useSelector((state) => state.difficulty.curDifficulty);
   const dispatch = useDispatch();
   const handleShowModal = () => {
@@ -52,7 +51,7 @@ const CodePanelBtns = ({ levelsList, level, desc, success, error }) => {
         onClick={handleShowModal}
       ></button>
       <button className="panel-btn check-btn" onClick={handleCheckStyles}>
-        {desc[lang].others.check}
+        {description.others.check}
       </button>
     </div>
   );

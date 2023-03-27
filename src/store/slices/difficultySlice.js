@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { setLang } from "./langSlice";
-import desc from "../../json/descriptions.json";
+import description from "../../assets/json/descriptions.json";
 
 const storedDifficulty = JSON.parse(localStorage.getItem("difficulty"));
 const currentDifficulty = localStorage.getItem("currentDifficulty");
@@ -40,7 +40,7 @@ export const difficultySlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(setLang, (state, action) => {
       state.difficultyList.map((elem) => {
-        elem.title = desc[action.payload].others[elem.value];
+        elem.title = description[action.payload].others[elem.value];
       });
     });
   },

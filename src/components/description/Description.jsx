@@ -1,7 +1,6 @@
-import desc from "../../json/descriptions.json";
 import LevelSelect from "./LevelSelect";
 import DescriptionMonitor from "./DescriptionMonitor";
-const Description = ({ levelsList }) => {
+const Description = ({ levelsList, description }) => {
 
   const links = [
     {
@@ -31,9 +30,9 @@ const Description = ({ levelsList }) => {
             />
           ))}
         </div>
-        <LevelSelect desc={desc} levelsList={levelsList}/>
+        <LevelSelect description={description} levelsList={levelsList}/>
       </div>
-      <DescriptionMonitor desc={desc}/>
+      <DescriptionMonitor description={description}/>
     </div>
   );
 };

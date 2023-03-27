@@ -1,9 +1,9 @@
-import Toggles from "./Toggles/Toggles";
-const DifficultySetting = ({desc, lang}) => {
+import Toggles from "./toggles/Toggles";
+const DifficultySetting = ({description}) => {
   
   return (
     <div className="settings-difficulties">
-      <p className="settings-subtitle">{desc[lang].others.diffSettings}:</p>
+      <p className="settings-subtitle">{description.others.diffSettings}:</p>
       <Toggles/>
     </div>
   );

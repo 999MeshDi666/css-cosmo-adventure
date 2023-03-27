@@ -1,6 +1,6 @@
 import TextArea from "./TextArea";
 
-const CodePanelMonitor = ({ level, desc }) => {
+const CodePanelMonitor = ({ level, description }) => {
   const parent = level.parentStyles ? "" : ".board {\n  display: flex; \n}";
   const child = level.parentStyles ? ".board {\n display: flex;" : `.${level.childName} {`
   return (
@@ -13,7 +13,7 @@ const CodePanelMonitor = ({ level, desc }) => {
         <p className="css-code text-content">
           {child}
         </p>
-        <TextArea desc={desc}/>
+        <TextArea description={description}/>
         <p className="text-content">{"}"}</p>
       </div>
     </div>
