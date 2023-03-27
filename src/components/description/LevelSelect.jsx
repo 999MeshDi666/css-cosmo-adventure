@@ -39,7 +39,7 @@ const LevelSelect = ({ levelsList, description  }) => {
           key={level}
           disabled={!completedLevel.includes(`level-${level}`)}
         >
-          {description.others.level}-{level}
+          {description.text.level}-{level}
         </option>
       ))}
     </select>

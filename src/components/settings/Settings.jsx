@@ -32,7 +32,7 @@ const Settings = ({description}) => {
       </Modal.Body>
       <Modal.Footer className="settings-footer">
         <button className="panel-btn close-btn" onClick={handleShowModal}>
-          {description.others.close}
+          {description.text.close}
         </button>
       </Modal.Footer>
     </Modal>

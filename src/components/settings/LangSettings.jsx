@@ -8,7 +8,7 @@ const LangSettings = ({ description, lang }) => {
   };
   return (
     <div className="settings-select">
-      <p className="settings-subtitle">{description.others.langSettings}:</p>
+      <p className="settings-subtitle">{description.text.langSettings}:</p>
       <select
         className="lang-select select"
         onChange={handleSelectLang}

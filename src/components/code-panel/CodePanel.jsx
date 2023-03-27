@@ -10,7 +10,7 @@ const CodePanel = ({ levelsList, level, description }) => {
     });
 
   const error = () =>
-    toast.error("Please try again", {
+    toast.error(description.text.error, {
       theme: "colored",
     });
   return (

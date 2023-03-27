@@ -22,11 +22,11 @@ const CodePanelBtns = ({ levelsList, level, description, success, error }) => {
     let maxLvl = Object.keys(levelsList).length;
     if (_.isEqual(style, level.answer)) {
       if (curLvl === maxLvl) {
-        success("Поздравляем ты все прошел!");
+        success(description.text.final);
       } 
       else {
         dispatch(increment());
-        success("🚀Продолжай в том же духе!");
+        success(description.text.success);
       }
     } else {
       error();
@@ -51,7 +51,7 @@ const CodePanelBtns = ({ levelsList, level, description, success, error }) => {
         onClick={handleShowModal}
       ></button>
       <button className="panel-btn check-btn" onClick={handleCheckStyles}>
-        {description.others.check}
+        {description.text.check}
       </button>
     </div>
   );

@@ -23,7 +23,7 @@ const TextArea = ({ description}) => {
       name="text"
       id="text"
       value={text}
-      placeholder={description.others.placeholder}
+      placeholder={description.text.placeholder}
       onChange={handleSetText}
     />
   );

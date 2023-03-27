@@ -40,7 +40,7 @@ export const difficultySlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(setLang, (state, action) => {
       state.difficultyList.map((elem) => {
-        elem.title = description[action.payload].others[elem.value];
+        elem.title = description[action.payload].text[elem.value];
       });
     });
   },
