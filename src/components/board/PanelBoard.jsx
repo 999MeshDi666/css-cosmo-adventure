@@ -1,10 +1,10 @@
 import { useSelector} from "react-redux";
-import { Astronaut, Spaceship } from './Characters';
+import { Astronaut, Spaceship } from './BoardCharacters';
 import _ from "lodash";
 
 
-const Board = ({level}) => {
-    
+const PanelBoard = ({level}) => {
+
     const style = useSelector((state) => state.styles.style);
     return (
         <div className="board panel">
@@ -37,4 +37,4 @@ const Board = ({level}) => {
     );
 };
 
-export default Board;
+export default PanelBoard;

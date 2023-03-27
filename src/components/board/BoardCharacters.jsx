@@ -17,6 +17,7 @@ export const Astronaut = ({color}) =>{
     )
 }
   
+
 export const Spaceship = ({color}) =>{
     return(
       <svg width="70%" height="70%" viewBox="0 0 1024 1024" className="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg">

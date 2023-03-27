@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import Settings from "./settings/Settings";
 import CodePanel from "./code-panel/CodePanel";
-import Board from "./board/Board";
+import PanelBoard from "./board/PanelBoard";
 import Description from "./description/Description";
 import levels from "../assets/json/levels.json";
 import descriptions from "../assets/json/descriptions.json";
@@ -23,7 +23,7 @@ const GamePage = () => {
           <CodePanel levelsList={levelsList} level={level} description={description} />
         </Col>
         <Col xs={12} lg={6}>
-          <Board level={level} />
+          <PanelBoard level={level} />
         </Col>
       </Row>
       <Settings description={description}/>
