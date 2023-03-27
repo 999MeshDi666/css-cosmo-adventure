@@ -6,7 +6,7 @@ import DifficultySetting from "./difficulty-settings/DifficultySetting";
 import Modal from "react-bootstrap/Modal";
 
 
-const ModalSettings = ({description}) => {
+const Settings = ({description}) => {
   const show = useSelector((state) => state.modal.value);
   const lang = useSelector((state) => state.lang.value);
   const dispatch = useDispatch();
@@ -39,4 +39,4 @@ const ModalSettings = ({description}) => {
   );
 };
 
-export default ModalSettings;
+export default Settings;

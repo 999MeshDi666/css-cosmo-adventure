@@ -1,7 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
-import ModalSettings from "./modal-settings/ModalSettings";
+import Settings from "./settings/Settings";
 import CodePanel from "./code-panel/CodePanel";
 import Board from "./board/Board";
 import Description from "./description/Description";
@@ -18,7 +18,7 @@ const GamePage = () => {
   return (
     <Container fluid className="game-container">
       <Row>
-        <Col xs={12} lg={6} className="">
+        <Col xs={12} lg={6}>
           <Description levelsList={levelsList} description={description}/>
           <CodePanel levelsList={levelsList} level={level} description={description} />
         </Col>
@@ -26,7 +26,7 @@ const GamePage = () => {
           <Board level={level} />
         </Col>
       </Row>
-      <ModalSettings description={description}/>
+      <Settings description={description}/>
       <ToastContainer
         role="alert"
         position="top-right"

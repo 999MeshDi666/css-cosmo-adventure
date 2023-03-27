@@ -22,11 +22,11 @@ const CodePanelBtns = ({ levelsList, level, description, success, error }) => {
     let maxLvl = Object.keys(levelsList).length;
     if (_.isEqual(style, level.answer)) {
       if (curLvl === maxLvl) {
-        success("Поздравляем ты все закончил!");
+        success("Поздравляем ты все прошел!");
       } 
       else {
         dispatch(increment());
-        success("Продолжай в том же духе!");
+        success("🚀Продолжай в том же духе!");
       }
     } else {
       error();

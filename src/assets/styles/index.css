@@ -329,6 +329,12 @@ h1,h2,h3,h4,h5,h6
 .label-toggle-in {
   animation: toggle-in 1s forwards 1 linear;
 }
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  background-color: #247b3e;
+}
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  background-color: #902020;
+}
 @keyframes toggle-in {
   0% {
     transform: translateX(10px);

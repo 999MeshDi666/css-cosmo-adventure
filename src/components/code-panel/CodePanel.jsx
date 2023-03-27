@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 const CodePanel = ({ levelsList, level, description }) => {
   const success = (text) =>
-    toast.success(`🚀 ${text}`, {
+    toast.success(text, {
       theme: "colored",
     });
 
