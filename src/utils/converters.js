@@ -17,16 +17,13 @@ export const obj2css = (obj) => {
 
 export const replaceKeyWordToTag = (text, desc) => {
     const keyWords = Object.keys(desc).filter((elem) =>
-      text.includes(elem)
+      text.toLowerCase().includes(elem)
     );
 
-    const textList = text.split(" ");
-    const toolTip = textList.map((word) => {
-      const regEx = /[|.|,]/;
-      const keyWord = word.replace(regEx, "");
-      const tag = `<span class="key-words" data-bs-toggle="tooltip" data-bs-placement="top" title="${desc[keyWord]}"> ${keyWord}</span>`;
-
-      const elem = keyWords.includes(keyWord)
+    const toolTip = text.split(" ").map((word) => {
+      const keyWord = word.replace(/[|.|,]/, "");
+      const tag = `<span class="key-words" data-bs-toggle="tooltip" data-bs-placement="top" title="${desc[keyWord.toLowerCase()]}"> ${keyWord}</span>`;
+      const elem = keyWords.includes(keyWord.toLowerCase())
         ? word.replace(keyWord, tag)
         : word;
       return elem;

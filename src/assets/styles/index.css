@@ -329,6 +329,26 @@ h1,h2,h3,h4,h5,h6
 .label-toggle-in {
   animation: toggle-in 1s forwards 1 linear;
 }
+.tooltip.show{
+  opacity: 1;
+}
+
+.tooltip-inner{
+  background-color: #6f7f9f;
+}
+.bs-tooltip-auto[data-popper-placement^=top] .tooltip-arrow::before{
+  border-top-color: #6f7f9f !important;
+}
+.bs-tooltip-auto[data-popper-placement^=right] .tooltip-arrow::before {
+  border-right-color: #6f7f9f !important;
+}
+.bs-tooltip-auto[data-popper-placement^=left] .tooltip-arrow::before {
+  border-left-color: #6f7f9f !important;
+}
+.bs-tooltip-auto[data-popper-placement^=bottom] .tooltip-arrow::before {
+  border-bottom-color: #6f7f9f !important;
+}
+
 .Toastify__toast-theme--colored.Toastify__toast--success {
   background-color: #247b3e;
 }
