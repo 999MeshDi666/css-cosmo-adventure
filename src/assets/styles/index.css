@@ -111,8 +111,8 @@ h1,h2,h3,h4,h5,h6
 .text-content {
   color: #fff;
   text-align: justify;
-  font-size: 10px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 20px;
 }
 .css-code {
   white-space: pre-wrap;
@@ -125,10 +125,10 @@ h1,h2,h3,h4,h5,h6
   border-radius: 5px;
   padding: 7px;
   margin-left: 10px;
-  font-size: 10px;
+  font-size: 12px;
 }
 .textarea-answer::placeholder {
-  font-size: 10px;
+  font-size: 12px;
 }
 .list-content{
   margin: 5px 0 0 10px;
@@ -139,7 +139,7 @@ h1,h2,h3,h4,h5,h6
   margin: 8px 0;
 }
 .line-numbers {
-  font-size: 10px;
+  font-size: 12px;
   width: 12px;
   text-align: center;
   line-height: 166%;
